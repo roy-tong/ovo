@@ -6,17 +6,17 @@ OVO lets general agents deliver real work, not just prompts. Each product can be
 
 ## 产品、版本与入口 / Products, releases and entry points
 
-- **Askovo**：在研发之前找出真实需求、替代方案与反证，让产品决定有外部证据和复审入口。Stable `2.25.0`；Preview `2.25.1rc1`。
+- **Askovo**：在研发之前找出真实需求、替代方案与反证，让产品决定有外部证据和复审入口。Stable `2.25.0`；Preview `2.25.1rc3`。
   Find real demand, alternatives and counterevidence before you build, with an evidence-backed decision you can reopen.
   Product entry: https://roy-tong.github.io/ovo/askovo/ and https://roy-tong.github.io/ovo/askovo/en.html
   Repository: https://github.com/roy-tong/Askovo
 
-- **Growovo**：在授权范围内持续处理机会、回复、跟进和结果回读，让发布之后的工作持续发生。Stable `0.23.0`；Preview `0.23.1rc2`。
+- **Growovo**：在授权范围内持续处理机会、回复、跟进和结果回读，让发布之后的工作持续发生。Stable `0.23.0`；Preview `0.23.1rc3`。
   Keep opportunity screening, replies, follow-up and result readback moving inside clear authorization.
   Product entry: https://roy-tong.github.io/ovo/growovo/ and https://roy-tong.github.io/ovo/growovo/en.html
   Repository: https://github.com/roy-tong/Growovo
 
-- **Verovo**：从调用记录和账单中发现重复、异常与低效环节，把费用对应到具体任务和合格结果。Stable `0.20.0`；Preview `0.20.1rc2`。
+- **Verovo**：从调用记录和账单中发现重复、异常与低效环节，把费用对应到具体任务和合格结果。Stable `0.20.0`；Preview `0.20.1rc4`。
   Find duplicates, anomalies and inefficient work in usage logs and supplier bills, then connect charges to tasks and accepted outcomes.
   Product entry: https://roy-tong.github.io/ovo/verovo/ and https://roy-tong.github.io/ovo/verovo/en.html
   Repository: https://github.com/roy-tong/Verovo
@@ -46,13 +46,13 @@ verovo review --sample<!--/OVO:verovo-stable-->
 
 Preview 只用于验收预发行能力，不与 Stable 的能力承诺混用。Use Preview only to evaluate prerelease capabilities.
 
-<!--OVO:askovo-preview-->pipx install askovo==2.25.1rc1
+<!--OVO:askovo-preview-->pipx install askovo==2.25.1rc3
 askovo demo<!--/OVO:askovo-preview-->
 
-<!--OVO:growovo-preview-->pipx install growovo==0.23.1rc2
+<!--OVO:growovo-preview-->pipx install growovo==0.23.1rc3
 mkt demo<!--/OVO:growovo-preview-->
 
-<!--OVO:verovo-preview-->pipx install verovo==0.20.1rc2
+<!--OVO:verovo-preview-->pipx install verovo==0.20.1rc4
 verovo review --sample<!--/OVO:verovo-preview-->
 
 也可以让 Agent 先试用 / Or let your agent try first:
@@ -76,7 +76,7 @@ mkt growth run SERVICE_ID --action diagnose-product --by "$USER"
 
 # Verovo: discover local agent logs and compare eligible task records
 verovo check --days 7
-verovo tool-value --file comparable-tasks.jsonl --json
+verovo tool-value --economics-case task-case.json --json
 ```
 
 ## 证据边界 / Evidence boundaries
