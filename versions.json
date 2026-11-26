@@ -4,21 +4,21 @@
   "products": {
     "askovo": {
       "stable": "2.25.0",
-      "preview": "2.25.1rc1",
+      "preview": "2.25.1rc2",
       "package": "askovo",
       "command": "askovo",
       "demo": "askovo demo"
     },
     "growovo": {
       "stable": "0.23.0",
-      "preview": "0.23.1rc2",
+      "preview": "0.23.1rc3",
       "package": "growovo",
       "command": "mkt",
       "demo": "mkt demo"
     },
     "verovo": {
       "stable": "0.20.0",
-      "preview": "0.20.1rc2",
+      "preview": "0.20.1rc4",
       "package": "verovo",
       "command": "verovo",
       "demo": "verovo review --sample"
