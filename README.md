@@ -10,7 +10,7 @@
 
 **官网**：[中文](https://roy-tong.github.io/ovo/) · [English](https://roy-tong.github.io/ovo/en.html) · [案例与 Demo](https://roy-tong.github.io/ovo/cases.html) · [不用安装先看结果](https://roy-tong.github.io/ovo/start.html)
 
-当前预发行版本：Askovo `2.25.1rc1`、Growovo `0.23.1rc2`、Verovo `0.20.1rc2`。本地 Demo 使用合成数据，公开案例链接原始来源。这里展示产品机制与实际交付，不把它写成外部采用证明。
+Stable：Askovo `2.25.0`、Growovo `0.23.0`、Verovo `0.20.0`；Preview：Askovo `2.25.1rc1`、Growovo `0.23.1rc2`、Verovo `0.20.1rc2`。版本事实源为 `versions.json`，安装块由 `python3 assets/sync_versions.py` 同步。产品级入口为 `/askovo/`、`/growovo/`、`/verovo/`，Agent 任务清单为 `agent-tools.json`。本地 Demo 使用合成数据，公开案例链接原始来源。这里展示产品机制与实际交付，不把它写成外部采用证明。
 
 ## 本地预览
 
@@ -36,6 +36,6 @@ Give your agent real work, not just prompts. Three independent open-source produ
 
 **Website**: [English](https://roy-tong.github.io/ovo/en.html) · [中文](https://roy-tong.github.io/ovo/) · [Cases & demos](https://roy-tong.github.io/ovo/en-cases.html) · [See results before installing](https://roy-tong.github.io/ovo/en-start.html)
 
-Current prereleases: Askovo `2.25.1rc1`, Growovo `0.23.1rc2` and Verovo `0.20.1rc2`. Local demos use synthetic data and public cases link to their sources. This demonstrates product mechanisms and deliverables, not external adoption.
+Stable: Askovo `2.25.0`, Growovo `0.23.0` and Verovo `0.20.0`. Preview: Askovo `2.25.1rc1`, Growovo `0.23.1rc2` and Verovo `0.20.1rc2`. `versions.json` is the release source; run `python3 assets/sync_versions.py` to synchronize marked install blocks. Product entries live under `/askovo/`, `/growovo/` and `/verovo/`; `agent-tools.json` describes real first tasks. Local demos use synthetic data and public cases link to their sources. This demonstrates product mechanisms and deliverables, not external adoption.
 
 Run the same preview command above, then check both languages, product switching, filters, demo output, copy actions, mobile navigation and links before publishing.

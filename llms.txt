@@ -4,48 +4,83 @@
 
 OVO lets general agents deliver real work, not just prompts. Each product can be installed independently or composed by a host agent. Bring a real task; OVO supplies data, services, execution and inspectable results.
 
-## 产品与版本 / Products and prereleases
+## 产品、版本与入口 / Products, releases and entry points
 
-- **Askovo `2.25.1rc1`**：在研发之前找出真实需求、替代方案与反证，让产品决定有外部证据和复审入口。
+- **Askovo**：在研发之前找出真实需求、替代方案与反证，让产品决定有外部证据和复审入口。Stable `2.25.0`；Preview `2.25.1rc1`。
   Find real demand, alternatives and counterevidence before you build, with an evidence-backed decision you can reopen.
+  Product entry: https://roy-tong.github.io/ovo/askovo/ and https://roy-tong.github.io/ovo/askovo/en.html
   Repository: https://github.com/roy-tong/Askovo
 
-- **Growovo `0.23.1rc2`**：在授权范围内持续处理机会、回复、跟进和结果回读，让发布之后的工作持续发生。
+- **Growovo**：在授权范围内持续处理机会、回复、跟进和结果回读，让发布之后的工作持续发生。Stable `0.23.0`；Preview `0.23.1rc2`。
   Keep opportunity screening, replies, follow-up and result readback moving inside clear authorization.
+  Product entry: https://roy-tong.github.io/ovo/growovo/ and https://roy-tong.github.io/ovo/growovo/en.html
   Repository: https://github.com/roy-tong/Growovo
 
-- **Verovo `0.20.1rc2`**：从调用记录和账单中发现重复、异常与低效环节，把费用对应到具体任务和合格结果。
+- **Verovo**：从调用记录和账单中发现重复、异常与低效环节，把费用对应到具体任务和合格结果。Stable `0.20.0`；Preview `0.20.1rc2`。
   Find duplicates, anomalies and inefficient work in usage logs and supplier bills, then connect charges to tasks and accepted outcomes.
+  Product entry: https://roy-tong.github.io/ovo/verovo/ and https://roy-tong.github.io/ovo/verovo/en.html
   Repository: https://github.com/roy-tong/Verovo
 
-## 网站入口 / Website entry points
+## Agent 与网站入口 / Agent and website entry points
 
+- Capability manifest / Agent task discovery: https://roy-tong.github.io/ovo/agent-tools.json
+- Release source / Stable and Preview versions: https://roy-tong.github.io/ovo/versions.json
 - 中文首页 / Chinese home: https://roy-tong.github.io/ovo/
 - English home: https://roy-tong.github.io/ovo/en.html
 - 真实案例与 Demo / Real cases and interactive demos: https://roy-tong.github.io/ovo/cases.html and https://roy-tong.github.io/ovo/en-cases.html
 - 工程手记 / Engineering journal: https://roy-tong.github.io/ovo/journal.html and https://roy-tong.github.io/ovo/en-journal.html
 - 不用安装先看结果 / See results before installing: https://roy-tong.github.io/ovo/start.html and https://roy-tong.github.io/ovo/en-start.html
 
-## 安装 / Install
+## Stable 安装 / Stable installation
 
-```bash
-pipx install askovo==2.25.1rc1
-askovo demo
+<!--OVO:askovo-stable-->pipx install askovo==2.25.0
+askovo demo<!--/OVO:askovo-stable-->
 
-pipx install growovo==0.23.1rc2
-mkt demo
+<!--OVO:growovo-stable-->pipx install growovo==0.23.0
+mkt demo<!--/OVO:growovo-stable-->
 
-pipx install verovo==0.20.1rc2
-verovo review --sample
-```
+<!--OVO:verovo-stable-->pipx install verovo==0.20.0
+verovo review --sample<!--/OVO:verovo-stable-->
+
+## Preview 安装 / Prerelease installation
+
+Preview 只用于验收预发行能力，不与 Stable 的能力承诺混用。Use Preview only to evaluate prerelease capabilities.
+
+<!--OVO:askovo-preview-->pipx install askovo==2.25.1rc1
+askovo demo<!--/OVO:askovo-preview-->
+
+<!--OVO:growovo-preview-->pipx install growovo==0.23.1rc2
+mkt demo<!--/OVO:growovo-preview-->
+
+<!--OVO:verovo-preview-->pipx install verovo==0.20.1rc2
+verovo review --sample<!--/OVO:verovo-preview-->
 
 也可以让 Agent 先试用 / Or let your agent try first:
 
 > 安装并运行 OVO 的本地 Demo。告诉我它交付了什么、证据保存在哪里，以及哪些结果仍无法确认。
 > Install and run OVO’s local demo. Tell me what it delivered, where the evidence is stored, and which results remain unconfirmed.
 
+## 第一项真实任务 / First real tasks
+
+```bash
+# Askovo: provide a real task.json with an owner and authorized sources
+askovo decide start --input task.json
+askovo decide status TASK_ID
+askovo decide brief TASK_ID --format md
+
+# Growovo: read a real repository; this never posts automatically
+mkt growth intake --repo /path/to/repository \
+  --slug owner/repo --read-metrics --out intake-goal.json
+mkt growth start --file intake-goal.json
+mkt growth run SERVICE_ID --action diagnose-product --by "$USER"
+
+# Verovo: discover local agent logs and compare eligible task records
+verovo check --days 7
+verovo tool-value --file comparable-tasks.jsonl --json
+```
+
 ## 证据边界 / Evidence boundaries
 
-公开案例链接原始来源。研究样本不等于用户数量或市场份额；执行回执不等于增长；供应商导出不等于独立买方证据；本地 Demo 使用合成数据，不代表真实生产采用。这些页面展示产品机制与交付结果，不伪造外部采用。
+公开案例链接原始来源。研究样本不等于用户数量或市场份额；执行回执不等于增长；账号所有者授权不等于平台许可；供应商导出不等于独立买方证据；本地 Demo 使用合成数据，不代表真实生产采用。这些页面展示产品机制与交付结果，不伪造外部采用。
 
-Public cases link to their sources. Research samples are not user counts or market share. Execution receipts are not growth. Supplier exports are not independent buyer evidence. Local demos use synthetic data and do not establish production adoption. These pages demonstrate product mechanisms and deliverables without inventing external adoption.
+Public cases link to their sources. Research samples are not user counts or market share. Execution receipts are not growth. Owner authorization is not platform permission. Supplier exports are not independent buyer evidence. Local demos use synthetic data and do not establish production adoption. These pages demonstrate product mechanisms and deliverables without inventing external adoption.

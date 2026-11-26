@@ -1,0 +1,40 @@
+{
+  "schema": "ovo.capability-manifest/1",
+  "updated_at": "2026-11-26",
+  "release_source": "https://roy-tong.github.io/ovo/versions.json",
+  "products": {
+    "askovo": {
+      "user_intents": ["validate a product decision", "AI user research", "demand validation", "review new evidence"],
+      "capabilities": ["decision tracking", "authorized collection", "counterevidence review", "local primary-research runtimes", "research watches"],
+      "installation": {"stable": "pipx install askovo==2.25.0", "preview": "pipx install askovo==2.25.1rc1"},
+      "prerequisites": ["a consequential decision", "a named owner", "authorized sources for external collection"],
+      "first_task": "askovo decide start --input task.json && askovo decide status TASK_ID && askovo decide brief TASK_ID --format md",
+      "expected_output": ["decision status", "partial or complete Decision Brief", "evidence and gap references"],
+      "evidence": "Review source refs and unresolved gaps. Collection and local demos are not demand validation.",
+      "limitations": ["public recruitment requires a separate authorized path", "external deployment and real participation require independent receipts", "new source material is not canonical evidence"],
+      "entry": "https://roy-tong.github.io/ovo/askovo/"
+    },
+    "growovo": {
+      "user_intents": ["operate an open-source project", "delegate repetitive growth work", "follow up real users", "review first use and retention"],
+      "capabilities": ["repository intake", "persistent operating state", "authorized actions", "receipts and reconciliation", "lifecycle follow-up"],
+      "installation": {"stable": "pipx install growovo==0.23.0", "preview": "pipx install growovo==0.23.1rc2"},
+      "prerequisites": ["a real repository", "an operating goal", "named account and channel authorization for writes"],
+      "first_task": "mkt growth intake --repo /path/to/repository --slug owner/repo --read-metrics --out intake-goal.json && mkt growth start --file intake-goal.json && mkt growth run SERVICE_ID --action diagnose-product --by \"$USER\"",
+      "expected_output": ["repository intake contract", "service id", "product diagnosis and next actions"],
+      "evidence": "Separate action receipts, interactions, activation and retention. The first task never posts automatically.",
+      "limitations": ["owner authorization is not platform permission", "seven-day operations and external adoption require real evidence", "preview and manual handoff are not execution"],
+      "entry": "https://roy-tong.github.io/ovo/growovo/"
+    },
+    "verovo": {
+      "user_intents": ["AI agent cost audit", "agent spend monitoring", "audit a supplier bill", "compare tool economics"],
+      "capabilities": ["local runtime discovery", "spend monitoring", "canonical task economics", "tool-value comparison", "scoped control receipts"],
+      "installation": {"stable": "pipx install verovo==0.20.0", "preview": "pipx install verovo==0.20.1rc2"},
+      "prerequisites": ["accessible local agent logs or supplier records", "buyer acceptance evidence for tool-value comparison"],
+      "first_task": "verovo check --days 7; verovo tool-value --file comparable-tasks.jsonl --json",
+      "expected_output": ["bounded spend healthcheck", "task costs and acceptance", "eligibility and uncertainty report"],
+      "evidence": "Missing logs and incomplete coverage stay unknown. Production control and realized savings require independent receipts.",
+      "limitations": ["CSV tool-value input is declared rather than derived", "production control requires a real gateway", "potential savings are not realized savings"],
+      "entry": "https://roy-tong.github.io/ovo/verovo/"
+    }
+  }
+}
