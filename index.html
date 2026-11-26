@@ -36,25 +36,54 @@
           <a class="primary" href="#products">委托一项真实任务 ↓</a>
           <a class="quiet" href="cases.html">先看真实案例 ↗</a>
         </div>
-        <div class="stage">
-          <div class="grid"></div>
-          <div class="plate plate-0" data-plate="0">
-            <img src="assets/askovo.webp" alt="" width="850" height="850">
-            <div class="caption"><b>Askovo</b><a href="cases.html#askovo-evidence">真实证据与决定复审 ↗</a></div>
+        <div class="task-preview">
+          <div class="preview-choices" role="group" aria-label="选择产品示例">
+            <button type="button" data-select="0" aria-pressed="true" aria-controls="preview-askovo">Askovo<span>研究需求</span></button>
+            <button type="button" data-select="1" aria-pressed="false" aria-controls="preview-growovo">Growovo<span>跟进用户</span></button>
+            <button type="button" data-select="2" aria-pressed="false" aria-controls="preview-verovo">Verovo<span>核对费用</span></button>
           </div>
-          <div class="plate plate-1" data-plate="1" hidden>
-            <img src="assets/growovo.webp" alt="" width="850" height="850">
-            <div class="caption"><b>Growovo</b><a href="cases.html#growovo-evidence">持续运营与业务回执 ↗</a></div>
-          </div>
-          <div class="plate plate-2" data-plate="2" hidden>
-            <img src="assets/verovo.webp" alt="" width="850" height="850">
-            <div class="caption"><b>Verovo</b><a href="cases.html#verovo-evidence">独立经济核验 ↗</a></div>
-          </div>
-          <div class="selectors" aria-label="选择产品预览">
-            <button type="button" data-select="0" aria-pressed="true">真实研究</button>
-            <button type="button" data-select="1" aria-pressed="false">持续运营</button>
-            <button type="button" data-select="2" aria-pressed="false">经济核验</button>
-          </div>
+          <section class="sample-sheet" id="preview-askovo" data-plate="0" aria-labelledby="question-askovo">
+            <div class="sheet-type"><span>研究简报</span><small>合成样例</small></div>
+            <h2 id="question-askovo">导出功能值得重做吗？</h2>
+            <dl class="sample-record">
+              <dt>用户反馈</dt><dd>“每次分享报告，我都得先改一遍导出的表格。”</dd>
+              <dt>初步建议</dt><dd>先弄清用户在改哪些内容，再定开发范围。</dd>
+            </dl>
+            <details class="sample-review">
+              <summary>加入一条访谈</summary>
+              <p>“我只想把内部备注这一列去掉。”</p>
+              <p><strong>复审建议</strong> 先测试能否在导出时选择字段。</p>
+            </details>
+            <a class="sample-link" href="cases.html#askovo-evidence">看需求验证案例 ↗</a>
+          </section>
+          <section class="sample-sheet" id="preview-growovo" data-plate="1" aria-labelledby="question-growovo">
+            <div class="sheet-type"><span>跟进记录</span><small>合成样例</small></div>
+            <h2 id="question-growovo">试用邀请发出后，该跟进谁？</h2>
+            <dl class="sample-record">
+              <dt>投递回执</dt><dd>邮件服务已接受邀请，尚未收到用户回复。</dd>
+              <dt>下一步</dt><dd>记下投递回执，等待回复。</dd>
+            </dl>
+            <details class="sample-review">
+              <summary>查看用户回复</summary>
+              <p>“装好了，第一份报告在哪里看？”</p>
+              <p><strong>下一步</strong> 发给对方上手指引，等首份报告生成后再记录首次使用。</p>
+            </details>
+            <a class="sample-link" href="cases.html#growovo-evidence">看持续运营案例 ↗</a>
+          </section>
+          <section class="sample-sheet" id="preview-verovo" data-plate="2" aria-labelledby="question-verovo">
+            <div class="sheet-type"><span>费用核对单</span><small>合成样例</small></div>
+            <h2 id="question-verovo">同一条回复算了几次？</h2>
+            <dl class="sample-record">
+              <dt>用量记录</dt><dd>同一个消息 ID 出现三行，每行都记了 100 tokens。</dd>
+              <dt>初步统计</dt><dd>逐行相加得到 300 tokens，需要核对重复项。</dd>
+            </dl>
+            <details class="sample-review">
+              <summary>按消息核对</summary>
+              <p>三行来自同一条回复，携带的是同一份用量。</p>
+              <p><strong>核对结果</strong> 去重后为 100 tokens。实际收费还需与账单核对。</p>
+            </details>
+            <a class="sample-link" href="cases.html#verovo-evidence">看经济核验案例 ↗</a>
+          </section>
         </div>
       </div>
     </section>

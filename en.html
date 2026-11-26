@@ -36,25 +36,54 @@
           <a class="primary" href="#products">Delegate a real task ↓</a>
           <a class="quiet" href="en-cases.html">Inspect real cases ↗</a>
         </div>
-        <div class="stage">
-          <div class="grid"></div>
-          <div class="plate plate-0" data-plate="0">
-            <img src="assets/askovo.webp" alt="" width="850" height="850">
-            <div class="caption"><b>Askovo</b><a href="en-cases.html#askovo-evidence">Real evidence and decision review ↗</a></div>
+        <div class="task-preview">
+          <div class="preview-choices" role="group" aria-label="Choose a product example">
+            <button type="button" data-select="0" aria-pressed="true" aria-controls="preview-askovo">Askovo<span>Research</span></button>
+            <button type="button" data-select="1" aria-pressed="false" aria-controls="preview-growovo">Growovo<span>Follow-up</span></button>
+            <button type="button" data-select="2" aria-pressed="false" aria-controls="preview-verovo">Verovo<span>Spend</span></button>
           </div>
-          <div class="plate plate-1" data-plate="1" hidden>
-            <img src="assets/growovo.webp" alt="" width="850" height="850">
-            <div class="caption"><b>Growovo</b><a href="en-cases.html#growovo-evidence">Continuous operations and receipts ↗</a></div>
-          </div>
-          <div class="plate plate-2" data-plate="2" hidden>
-            <img src="assets/verovo.webp" alt="" width="850" height="850">
-            <div class="caption"><b>Verovo</b><a href="en-cases.html#verovo-evidence">Independent economic verification ↗</a></div>
-          </div>
-          <div class="selectors" aria-label="Choose a product preview">
-            <button type="button" data-select="0" aria-pressed="true">Real research</button>
-            <button type="button" data-select="1" aria-pressed="false">Operations</button>
-            <button type="button" data-select="2" aria-pressed="false">Economics</button>
-          </div>
+          <section class="sample-sheet" id="preview-askovo" data-plate="0" aria-labelledby="question-askovo">
+            <div class="sheet-type"><span>Research brief</span><small>Sample data</small></div>
+            <h2 id="question-askovo">Should we rebuild export?</h2>
+            <dl class="sample-record">
+              <dt>User feedback</dt><dd>“Every time I share a report, I edit the exported sheet first.”</dd>
+              <dt>First decision</dt><dd>Find out what people edit before scoping a rebuild.</dd>
+            </dl>
+            <details class="sample-review">
+              <summary>Add an interview</summary>
+              <p>“I just need to remove the internal notes column.”</p>
+              <p><strong>Revised decision</strong> Test a field selector before rebuilding export.</p>
+            </details>
+            <a class="sample-link" href="en-cases.html#askovo-evidence">Explore the research case ↗</a>
+          </section>
+          <section class="sample-sheet" id="preview-growovo" data-plate="1" aria-labelledby="question-growovo">
+            <div class="sheet-type"><span>Follow-up record</span><small>Sample data</small></div>
+            <h2 id="question-growovo">Who needs a follow-up?</h2>
+            <dl class="sample-record">
+              <dt>Delivery receipt</dt><dd>The mail server accepted the invitation. No reply yet.</dd>
+              <dt>Next step</dt><dd>Record delivery and wait for a response.</dd>
+            </dl>
+            <details class="sample-review">
+              <summary>Read the reply</summary>
+              <p>“Installed it. Where do I find my first report?”</p>
+              <p><strong>Next step</strong> Send the getting-started guide. Track first use when the first report is generated.</p>
+            </details>
+            <a class="sample-link" href="en-cases.html#growovo-evidence">Explore the operations case ↗</a>
+          </section>
+          <section class="sample-sheet" id="preview-verovo" data-plate="2" aria-labelledby="question-verovo">
+            <div class="sheet-type"><span>Usage review</span><small>Sample data</small></div>
+            <h2 id="question-verovo">How many responses are we counting?</h2>
+            <dl class="sample-record">
+              <dt>Usage record</dt><dd>Three rows share a message ID. Each reports 100 tokens.</dd>
+              <dt>Initial count</dt><dd>The row sum is 300 tokens. Check for duplicates.</dd>
+            </dl>
+            <details class="sample-review">
+              <summary>Reconcile by message</summary>
+              <p>All three rows carry the same usage snapshot from one response.</p>
+              <p><strong>Reconciled total</strong> The unique total is 100 tokens. Check the invoice to verify the charge.</p>
+            </details>
+            <a class="sample-link" href="en-cases.html#verovo-evidence">Explore the billing case ↗</a>
+          </section>
         </div>
       </div>
     </section>

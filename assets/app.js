@@ -1,22 +1,13 @@
-const stage = document.querySelector('.stage');
-if (stage) {
-  const buttons = stage.querySelectorAll('[data-select]');
-  const plates = stage.querySelectorAll('[data-plate]');
-  buttons.forEach((button) => button.addEventListener('click', () => {
-    buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
-    plates.forEach((plate) => { plate.hidden = plate.dataset.plate !== button.dataset.select; });
-  }));
-  const motion = matchMedia('(prefers-reduced-motion: no-preference) and (pointer: fine)');
-  stage.addEventListener('pointermove', (event) => {
-    if (!motion.matches) return;
-    const box = stage.getBoundingClientRect();
-    stage.style.setProperty('--x', (0.5 - (event.clientY - box.top) / box.height) * 12 + 'deg');
-    stage.style.setProperty('--y', ((event.clientX - box.left) / box.width - 0.5) * 16 + 'deg');
-  });
-  stage.addEventListener('pointerleave', () => {
-    stage.style.removeProperty('--x');
-    stage.style.removeProperty('--y');
-  });
+const preview = document.querySelector('.task-preview');
+if (preview) {
+  const buttons = preview.querySelectorAll('[data-select]');
+  const panels = preview.querySelectorAll('[data-plate]');
+  function selectExample(active) {
+    buttons.forEach((button) => button.setAttribute('aria-pressed', String(button === active)));
+    panels.forEach((panel) => { panel.hidden = panel.dataset.plate !== active.dataset.select; });
+  }
+  buttons.forEach((button) => button.addEventListener('click', () => selectExample(button)));
+  selectExample(buttons[0]);
 }
 const filters = document.querySelectorAll('[data-filter]');
 function applyFilter(value) {
