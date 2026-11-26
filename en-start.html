@@ -1,13 +1,40 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Get started · OVO</title><meta name="description" content="Three independent open-source tools for product research, growth operations and AI spend verification.">
-<link rel="canonical" href="https://roy-tong.github.io/ovo/en-start.html"><link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/start.html"><link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-start.html">
-<meta property="og:title" content="Get started · OVO"><meta property="og:description" content="Three independent open-source tools for product research, growth operations and AI spend verification."><meta property="og:url" content="https://roy-tong.github.io/ovo/en-start.html"><meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/styles.css"><script defer src="assets/app.js"></script></head><body>
-<a class="skip" href="#main">Skip to content</a>
-<header><div class="frame nav"><a class="brand" href="en.html" aria-label="OVO">ovo</a><nav><a href="en.html#products">Products</a><a href="en-cases.html">Cases & demos</a><a href="en-journal.html">Journal</a></nav><div class="nav-end"><a class="language" href="start.html">中文</a><a class="pill" href="en-start.html">Get started ↗</a></div></div></header>
-<main id="main"><div class="frame inner"><div class="page-title"><div class="kicker">QUICKSTART</div><h1>Run a local example.</h1><p>Pick one tool. Run the two commands in a terminal with pipx installed to inspect its sample output. These versions are prereleases.</p></div><article class="quick tone-0" id="askovo-start"><div><div class="product-name"><span class="dot"></span>Askovo</div><h2>Reviewable decision brief</h2><a class="line-link" href="https://github.com/roy-tong/Askovo">Source & documentation ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install askovo==2.25.1rc1
-askovo demo</code></pre><p class="sample-output">Sample output · Seven synthetic records support one judgment. The audit records source distribution and duplicates.</p></div></article><article class="quick tone-1" id="growovo-start"><div><div class="product-name"><span class="dot"></span>Growovo</div><h2>Follow-up record with receipts</h2><a class="line-link" href="https://github.com/roy-tong/Growovo">Source & documentation ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install growovo==0.23.1rc2
-mkt demo</code></pre><p class="sample-output">Sample output · Inspect permission checks, an offline receipt and blocked actions.</p></div></article><article class="quick tone-2" id="verovo-start"><div><div class="product-name"><span class="dot"></span>Verovo</div><h2>Line-item reconciliation</h2><a class="line-link" href="https://github.com/roy-tong/Verovo">Source & documentation ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install verovo==0.20.1rc2
-verovo review --sample</code></pre><p class="sample-output">Sample output · Charges match the agreed amount. Five tasks needed human intervention, exceeding the limit of two.</p></div></article></div></main>
-<footer><div class="frame foot"><a class="brand" href="en.html">ovo</a><span>MIT · Open source</span><div><a class="" href="https://github.com/roy-tong/Askovo">Askovo ↗</a> <a class="" href="https://github.com/roy-tong/Growovo">Growovo ↗</a> <a class="" href="https://github.com/roy-tong/Verovo">Verovo ↗</a> <a class="" href="https://discord.gg/UqrM8MCXb">Discord ↗</a></div></div></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Run a demo, then delegate real work · OVO</title>
+  <meta name="description" content="Install three prerelease products, run local examples and inspect real output. Then bring a consequential research, operations or economic-verification task.">
+  <link rel="canonical" href="https://roy-tong.github.io/ovo/en-start.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/start.html">
+  <link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-start.html">
+  <meta property="og:title" content="Run a demo, then delegate real work · OVO">
+  <meta property="og:description" content="Three prerelease packages with verified local demos. Start with a real task only after you choose the necessary data, account and production permissions.">
+  <meta property="og:url" content="https://roy-tong.github.io/ovo/en-start.html">
+  <meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="frame nav"><a class="brand" href="en.html" aria-label="OVO">ovo</a><nav><a href="en.html#products">Products</a><a href="en-cases.html">Cases & demos</a><a href="en-journal.html">Journal</a></nav><div class="nav-end"><a class="language" href="start.html">中文</a><a class="pill" href="en-start.html">Get started ↗</a></div></div></header>
+
+  <main id="main"><div class="frame inner">
+    <div class="page-title"><div class="kicker">QUICKSTART</div><h1>Run a demo. Then delegate a real task.</h1><p>Run these commands in a terminal with pipx installed to inspect actual product output. These prereleases have been run locally. You decide when to connect real users, accounts or production controls.</p></div>
+
+    <article class="quick tone-0" id="askovo-start"><div><div class="product-name"><span class="dot"></span>Askovo</div><h2>From a product decision to reviewable evidence</h2><a class="line-link" href="https://github.com/roy-tong/Askovo">Source & documentation ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install askovo==2.25.1rc1
+askovo demo</code></pre><p class="sample-output">Sample output · Seven synthetic records support one judgment, with source distribution and duplicates preserved in the audit. Next, bring a product decision with a real cost of being wrong.</p></div></article>
+
+    <article class="quick tone-1" id="growovo-start"><div><div class="product-name"><span class="dot"></span>Growovo</div><h2>From authorized actions to operating receipts</h2><a class="line-link" href="https://github.com/roy-tong/Growovo">Source & documentation ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install growovo==0.23.1rc2
+mkt demo</code></pre><p class="sample-output">Sample output · Inspect permission checks, an offline receipt and blocked actions. Next, choose one real channel and the most repetitive operating task in your week.</p></div></article>
+
+    <article class="quick tone-2" id="verovo-start"><div><div class="product-name"><span class="dot"></span>Verovo</div><h2>From charge records to independent economics</h2><a class="line-link" href="https://github.com/roy-tong/Verovo">Source & documentation ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install verovo==0.20.1rc2
+verovo review --sample</code></pre><p class="sample-output">Sample output · Charges match the agreed amount. Five tasks needed human intervention, exceeding the limit of two. Next, bring an Agent environment or a supplier billing period.</p></div></article>
+
+    <article class="quick tone-0" id="bp"><div><div class="product-name"><span class="dot"></span>OVO</div><h2>Read the long-term product strategy</h2><p>A 20-page rebuilt BP on life after general agents become commodities: real-world supply, low-touch delegation, independent evidence and real-task evaluation.</p><div class="links"><a class="line-link" href="assets/bp/ovo-agent-native-bp-20261126.pdf">Download PDF ↗</a><a class="line-link" href="assets/bp/ovo-agent-native-bp-20261126.pptx">Download editable PPTX ↗</a></div></div></article>
+  </div></main>
+
+  <footer><div class="frame foot"><a class="brand" href="en.html">ovo</a><span>MIT · Open source</span><div><a href="https://github.com/roy-tong/Askovo">Askovo ↗</a> <a href="https://github.com/roy-tong/Growovo">Growovo ↗</a> <a href="https://github.com/roy-tong/Verovo">Verovo ↗</a> <a href="https://discord.gg/UqrM8MCXb">Discord ↗</a></div></div></footer>
+</body>
+</html>

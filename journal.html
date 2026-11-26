@@ -1,10 +1,39 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>工程手记 · OVO</title><meta name="description" content="三个独立的开源工具，帮产品团队做研究、做运营，也把 Agent 花出去的钱算清楚。">
-<link rel="canonical" href="https://roy-tong.github.io/ovo/journal.html"><link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/journal.html"><link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-journal.html">
-<meta property="og:title" content="工程手记 · OVO"><meta property="og:description" content="三个独立的开源工具，帮产品团队做研究、做运营，也把 Agent 花出去的钱算清楚。"><meta property="og:url" content="https://roy-tong.github.io/ovo/journal.html"><meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/styles.css"><script defer src="assets/app.js"></script></head><body>
-<a class="skip" href="#main">跳到正文</a>
-<header><div class="frame nav"><a class="brand" href="index.html" aria-label="OVO">ovo</a><nav><a href="index.html#products">产品</a><a href="cases.html">案例与演示</a><a href="journal.html" aria-current="page">工程手记</a></nav><div class="nav-end"><a class="language" href="en-journal.html">EN</a><a class="pill" href="start.html">开始使用 ↗</a></div></div></header>
-<main id="main"><div class="frame inner"><div class="page-title"><div class="kicker">ENGINEERING JOURNAL</div><h1>工程手记</h1><p>从源码看三个具体问题：如何保存研究判断、恢复中断的运营任务、重算一笔费用。文章以英文写作。</p></div><div class="filters"><button type="button" data-filter="all" aria-pressed="true">全部</button><button type="button" data-filter="askovo" aria-pressed="false">Askovo</button><button type="button" data-filter="growovo" aria-pressed="false">Growovo</button><button type="button" data-filter="verovo" aria-pressed="false">Verovo</button></div><article class="essay tone-0" data-item="askovo"><span class="product-name"><span class="dot"></span>Askovo</span><h2><a class="" href="https://roy-tong.github.io/en/notes/01-askovo-a-research-database-needs-transactions/">A research database needs transaction semantics ↗</a></h2></article><article class="essay tone-0" data-item="askovo"><span class="product-name"><span class="dot"></span>Askovo</span><h2><a class="" href="https://roy-tong.github.io/en/notes/04-askovo-product-research-needs-a-type-system/">Product research needs a type system, not a confidence score ↗</a></h2></article><article class="essay tone-1" data-item="growovo"><span class="product-name"><span class="dot"></span>Growovo</span><h2><a class="" href="https://roy-tong.github.io/en/notes/02-growovo-exactly-once-is-the-wrong-goal/">Exactly-once execution is the wrong goal ↗</a></h2></article><article class="essay tone-1" data-item="growovo"><span class="product-name"><span class="dot"></span>Growovo</span><h2><a class="" href="https://roy-tong.github.io/en/notes/05-growovo-a-scheduler-that-knows-when-not-to-send/">A scheduler that knows when not to send ↗</a></h2></article><article class="essay tone-2" data-item="verovo"><span class="product-name"><span class="dot"></span>Verovo</span><h2><a class="" href="https://roy-tong.github.io/en/notes/03-verovo-deterministic-replay-with-unknowns/">Deterministic replay for AI charges, with the unknowns intact ↗</a></h2></article><article class="essay tone-2" data-item="verovo"><span class="product-name"><span class="dot"></span>Verovo</span><h2><a class="" href="https://roy-tong.github.io/en/notes/06-verovo-a-vendor-export-is-not-buyer-evidence/">A vendor export is not buyer evidence ↗</a></h2></article><article class="essay tone-2" data-item="verovo"><span class="product-name"><span class="dot"></span>Verovo</span><h2><a class="" href="https://roy-tong.github.io/Verovo/blog/ai-spend-optimization.html">How to optimize AI agent spend without confusing cost with value ↗</a></h2></article><a class="line-link" href="https://roy-tong.github.io/essays/">查看文章归档 ↗</a></div></main>
-<footer><div class="frame foot"><a class="brand" href="index.html">ovo</a><span>MIT · Open source</span><div><a class="" href="https://github.com/roy-tong/Askovo">Askovo ↗</a> <a class="" href="https://github.com/roy-tong/Growovo">Growovo ↗</a> <a class="" href="https://github.com/roy-tong/Verovo">Verovo ↗</a> <a class="" href="https://discord.gg/UqrM8MCXb">Discord ↗</a></div></div></footer></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工程手记 · OVO</title>
+  <meta name="description" content="OVO 工程手记：研究事务、证据资格、可恢复执行、确定性重放与独立经济度量。用真实代码和失败路径解释产品边界。">
+  <link rel="canonical" href="https://roy-tong.github.io/ovo/journal.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/journal.html">
+  <link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-journal.html">
+  <meta property="og:title" content="工程手记 · OVO">
+  <meta property="og:description" content="研究事务、可恢复执行、确定性重放与独立经济度量。文章对应真实代码、任务和失败路径。">
+  <meta property="og:url" content="https://roy-tong.github.io/ovo/journal.html">
+  <meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header><div class="frame nav"><a class="brand" href="index.html" aria-label="OVO">ovo</a><nav><a href="index.html#products">产品</a><a href="cases.html">案例与演示</a><a href="journal.html" aria-current="page">工程手记</a></nav><div class="nav-end"><a class="language" href="en-journal.html">EN</a><a class="pill" href="start.html">开始使用 ↗</a></div></div></header>
+
+  <main id="main"><div class="frame inner">
+    <div class="page-title"><div class="kicker">ENGINEERING JOURNAL</div><h1>工程手记</h1><p>每篇只解决一个具体问题：机制是什么，如何运行，在哪里失败，为什么这样取舍。这里提供中英文导读，文章正文为英文。</p></div>
+    <div class="filters"><button type="button" data-filter="all" aria-pressed="true">全部</button><button type="button" data-filter="askovo" aria-pressed="false">Askovo</button><button type="button" data-filter="growovo" aria-pressed="false">Growovo</button><button type="button" data-filter="verovo" aria-pressed="false">Verovo</button></div>
+
+    <article class="essay tone-0" data-item="askovo"><span class="product-name"><span class="dot"></span>Askovo</span><h2><a href="https://roy-tong.github.io/en/notes/01-askovo-a-research-database-needs-transactions/">A research database needs transaction semantics ↗</a></h2><p>研究不是把材料堆进文件夹。请求快照、证据联结、事务与隔离，决定一条反例能否安全地改变原判断。</p></article>
+    <article class="essay tone-0" data-item="askovo"><span class="product-name"><span class="dot"></span>Askovo</span><h2><a href="https://roy-tong.github.io/en/notes/04-askovo-product-research-needs-a-type-system/">Product research needs a type system, not a confidence score ↗</a></h2><p>一条真实记录仍可能回答错问题。用证据类型和形式结论门，替代看似精确却无法复核的信心分数。</p></article>
+    <article class="essay tone-1" data-item="growovo"><span class="product-name"><span class="dot"></span>Growovo</span><h2><a href="https://roy-tong.github.io/en/notes/02-growovo-exactly-once-is-the-wrong-goal/">Exactly-once execution is the wrong goal ↗</a></h2><p>真实运营会中断、超时，也会遇到结果未知。比“恰好一次”更重要的是审批指纹、租约、幂等和独立回读。</p></article>
+    <article class="essay tone-1" data-item="growovo"><span class="product-name"><span class="dot"></span>Growovo</span><h2><a href="https://roy-tong.github.io/en/notes/05-growovo-a-scheduler-that-knows-when-not-to-send/">A scheduler that knows when not to send ↗</a></h2><p>持续执行不等于到点发送。资格、时效、预算、内容新鲜度和停止条件，决定调度器什么时候应该不做动作。</p></article>
+    <article class="essay tone-2" data-item="verovo"><span class="product-name"><span class="dot"></span>Verovo</span><h2><a href="https://roy-tong.github.io/en/notes/03-verovo-deterministic-replay-with-unknowns/">Deterministic replay for AI charges, with the unknowns intact ↗</a></h2><p>确定性重算不是把未知填成零。事件身份、修订、Decimal、内容寻址和逐行处置，共同保证费用可以重放。</p></article>
+    <article class="essay tone-2" data-item="verovo"><span class="product-name"><span class="dot"></span>Verovo</span><h2><a href="https://roy-tong.github.io/en/notes/06-verovo-a-vendor-export-is-not-buyer-evidence/">A vendor export is not buyer evidence ↗</a></h2><p>供应商导出只能说明一个控制域的记录。独立买方核验还要检查结果观察者、来源和实际业务验收。</p></article>
+    <article class="essay tone-2" data-item="verovo"><span class="product-name"><span class="dot"></span>Verovo</span><h2><a href="https://roy-tong.github.io/Verovo/blog/ai-spend-optimization.html">How to optimize AI agent spend without confusing cost with value ↗</a></h2><p>省钱不等于少花钱。每个合格结果的成本、工具替换实验和质量门，决定优化是否真的改善了经济性。</p></article>
+    <a class="line-link" href="https://roy-tong.github.io/essays/">查看全部文章归档 ↗</a>
+  </div></main>
+
+  <footer><div class="frame foot"><a class="brand" href="index.html">ovo</a><span>MIT · Open source</span><div><a href="https://github.com/roy-tong/Askovo">Askovo ↗</a> <a href="https://github.com/roy-tong/Growovo">Growovo ↗</a> <a href="https://github.com/roy-tong/Verovo">Verovo ↗</a> <a href="https://discord.gg/UqrM8MCXb">Discord ↗</a></div></div></footer>
+</body>
+</html>

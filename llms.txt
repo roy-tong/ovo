@@ -1,16 +1,48 @@
 # OVO
 
-Three independent open-source tools for product teams.
+OVO 让通用 Agent 把真实业务做成。三个独立开源产品，可以单独安装，也可以由宿主 Agent 按需组合。宿主 Agent 选择执行路径；OVO 提供真实服务、数据、持久状态和确定性证据约束。
 
-- [Askovo](https://github.com/roy-tong/Askovo) helps researchers and product managers connect decisions to user evidence, counterexamples and later reviews.
-- [Growovo](https://github.com/roy-tong/Growovo) helps maintainers and small teams carry out authorized growth work, track replies and distinguish execution receipts from first use.
-- [Verovo](https://github.com/roy-tong/Verovo) helps engineers and buyers reconcile AI charges against usage records and compare costs for accepted tasks.
+OVO lets general agents deliver real work. Each product can be installed independently or composed by a host agent. The agent chooses the execution path; OVO supplies real services, data, durable state and deterministic evidence constraints.
 
-## Explore
+## 产品与版本 / Products and prereleases
 
-- [English](https://roy-tong.github.io/ovo/en.html) · [中文](https://roy-tong.github.io/ovo/)
-- [Cases and interactive sample demos](https://roy-tong.github.io/ovo/en-cases.html)
-- [Run a local prerelease demo](https://roy-tong.github.io/ovo/en-start.html)
-- [Engineering journal](https://roy-tong.github.io/ovo/en-journal.html)
+- **Askovo `2.25.1rc1`**：机会研究、需求验证和持续产品情报。输入一项产品决定和现有材料，获得真实证据、反证和可复审依据。
+  Opportunity research, demand validation and product intelligence. Bring a product decision and existing material to obtain real evidence, counterevidence and a reviewable decision.
+  Repository: https://github.com/roy-tong/Askovo
 
-Case studies cite their public sources. Browser interactions use synthetic data. The quickstart runs the corresponding product locally.
+- **Growovo `0.23.1rc2`**：持续市场监听、授权运营、用户跟进、首用和分发复盘。发送量、真实互动、首次使用和主动复用分别记录。
+  Continuous market listening, authorized operations, follow-up, first use and distribution review. Send volume, qualified interaction, first use and voluntary reuse stay separate.
+  Repository: https://github.com/roy-tong/Growovo
+
+- **Verovo `0.20.1rc2`**：Agent 费用健康检查、独立账单审计和 Agent 经济性优化。区分估算费用、确认账单、控制覆盖、潜在节省和实际节省。
+  Agent spend healthchecks, independent bill audits and economics optimization. Keep estimates, confirmed bills, control coverage, potential savings and realized savings separate.
+  Repository: https://github.com/roy-tong/Verovo
+
+## 网站入口 / Website entry points
+
+- 中文首页 / Chinese home: https://roy-tong.github.io/ovo/
+- English home: https://roy-tong.github.io/ovo/en.html
+- 真实案例与 Demo / Real cases and interactive demos: https://roy-tong.github.io/ovo/cases.html and https://roy-tong.github.io/ovo/en-cases.html
+- 工程手记 / Engineering journal: https://roy-tong.github.io/ovo/journal.html and https://roy-tong.github.io/ovo/en-journal.html
+- 快速开始 / Quickstart: https://roy-tong.github.io/ovo/start.html and https://roy-tong.github.io/ovo/en-start.html
+- BP / Strategy deck: https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pdf
+- Editable BP: https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pptx
+
+## 安装 / Install
+
+```bash
+pipx install askovo==2.25.1rc1
+askovo demo
+
+pipx install growovo==0.23.1rc2
+mkt demo
+
+pipx install verovo==0.20.1rc2
+verovo review --sample
+```
+
+## 证据边界 / Evidence boundaries
+
+公开研究样本不等于用户数量或市场份额；发送回执不等于增长；供应商导出不等于独立买方证据；本地 Demo 使用合成数据，不代表真实参与者、真实生产控制或外部采用。当前没有真实外部复用结论。
+
+Public research samples are not user counts or market share. Dispatch receipts are not growth. Supplier exports are not independent buyer evidence. Local demos use synthetic data and do not establish real participants, production control or external adoption. Voluntary repeat use remains unproven.
