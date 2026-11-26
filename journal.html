@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Journal | OVO 产品与工程判断</title>
+  <meta name="description" content="OVO Journal：研究事务、可恢复执行、确定性账单重放、证据类型、调度资格与买方控制域。">
+  <link rel="canonical" href="https://roy-tong.github.io/ovo/journal.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/journal.html">
+  <link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-journal.html">
+  <link rel="alternate" hreflang="x-default" href="https://roy-tong.github.io/ovo/journal.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OVO">
+  <meta property="og:title" content="Journal | OVO 产品与工程判断">
+  <meta property="og:description" content="六篇 OVO 工程深稿与经济优化方法，关联真实任务和可复现证据。">
+  <meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="nav"><div class="nav-inner">
+    <a class="brand" href="./" aria-label="OVO 首页">OVO <small>AI NATIVE BUSINESS DELIVERY</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="展开或收起导航"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>菜单</button>
+    <nav class="nav-links" id="nav-links" aria-label="主导航"><a href="index.html#products">产品</a><a href="cases.html">真实案例</a><a href="journal.html" aria-current="page">Journal</a><a href="start.html">开始使用</a><a class="nav-lang" href="en-journal.html" hreflang="en" lang="en">EN</a></nav>
+  </div></header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="journal-title">
+      <div class="wrap">
+        <h1 id="journal-title">把产品判断写到代码、证据和失败路径里</h1>
+        <p class="section-intro">OVO 工程系列每篇只处理一个技术命题：机制是什么，怎样运行，在哪里失败，为什么这样取舍。文章与产品任务直接关联。</p>
+        <div class="journal-toolbar" data-filter-group="journal" role="group" aria-label="按产品筛选文章">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button class="filter-btn" type="button" data-filter="askovo" aria-pressed="false">Askovo</button>
+          <button class="filter-btn" type="button" data-filter="growovo" aria-pressed="false">Growovo</button>
+          <button class="filter-btn" type="button" data-filter="verovo" aria-pressed="false">Verovo</button>
+        </div>
+
+        <div class="journal-list">
+          <article class="journal-item" data-journal-product="askovo">
+            <div class="journal-meta"><span class="tag">Askovo · 研究事务</span><time datetime="2026-11-24">2026-11-24</time></div>
+            <div><h3><a href="https://roy-tong.github.io/en/notes/01-askovo-a-research-database-needs-transactions/">A research database needs transaction semantics</a></h3><p>七节点与证据联结、请求快照、LRU 与隔离的区别、观察导出事务、反证 safe hold，以及为什么合法 BLOCKED 也是研究结果。</p></div>
+            <div class="journal-action"><a href="https://roy-tong.github.io/en/notes/01-askovo-a-research-database-needs-transactions/">阅读文章 →</a></div>
+          </article>
+          <article class="journal-item" data-journal-product="askovo">
+            <div class="journal-meta"><span class="tag">Askovo · 证据资格</span><time datetime="2026-11-24">2026-11-24</time></div>
+            <div><h3><a href="https://roy-tong.github.io/en/notes/04-askovo-product-research-needs-a-type-system/">Product research needs a type system, not a confidence score</a></h3><p>三维证据资格、导入结构上限、独立来源计数、形式结论门，以及为什么可靠的记录仍可能是错误结论类型。</p></div>
+            <div class="journal-action"><a href="https://roy-tong.github.io/en/notes/04-askovo-product-research-needs-a-type-system/">阅读文章 →</a></div>
+          </article>
+          <article class="journal-item" data-journal-product="growovo">
+            <div class="journal-meta"><span class="tag">Growovo · 执行恢复</span><time datetime="2026-11-24">2026-11-24</time></div>
+            <div><h3><a href="https://roy-tong.github.io/en/notes/02-growovo-exactly-once-is-the-wrong-goal/">Exactly-once execution is the wrong goal</a></h3><p>审批指纹、能力求值、SQLite 尝试租约、入站幂等、出站独立读取，以及为什么恢复一致性比“恰好一次”更重要。</p></div>
+            <div class="journal-action"><a href="https://roy-tong.github.io/en/notes/02-growovo-exactly-once-is-the-wrong-goal/">阅读文章 →</a></div>
+          </article>
+          <article class="journal-item" data-journal-product="growovo">
+            <div class="journal-meta"><span class="tag">Growovo · 调度资格</span><time datetime="2026-11-24">2026-11-24</time></div>
+            <div><h3><a href="https://roy-tong.github.io/en/notes/05-growovo-a-scheduler-that-knows-when-not-to-send/">A scheduler that knows when not to send</a></h3><p>资格拒绝、动作身份、UTC 预算、stale draft、实时选择和单探测恢复：调度器最重要的决定有时是不发送。</p></div>
+            <div class="journal-action"><a href="https://roy-tong.github.io/en/notes/05-growovo-a-scheduler-that-knows-when-not-to-send/">阅读文章 →</a></div>
+          </article>
+          <article class="journal-item" data-journal-product="verovo">
+            <div class="journal-meta"><span class="tag">Verovo · 确定性重放</span><time datetime="2026-11-24">2026-11-24</time></div>
+            <div><h3><a href="https://roy-tong.github.io/en/notes/03-verovo-deterministic-replay-with-unknowns/">Deterministic replay for AI charges, with the unknowns intact</a></h3><p>两条事件重算 USD 0.0200；去重冲突、计数粒度、Decimal、内容寻址重放、OCR 与签核、逐行处置。</p></div>
+            <div class="journal-action"><a href="https://roy-tong.github.io/en/notes/03-verovo-deterministic-replay-with-unknowns/">阅读文章 →</a></div>
+          </article>
+          <article class="journal-item" data-journal-product="verovo">
+            <div class="journal-meta"><span class="tag">Verovo · 买方证据</span><time datetime="2026-11-24">2026-11-24</time></div>
+            <div><h3><a href="https://roy-tong.github.io/en/notes/06-verovo-a-vendor-export-is-not-buyer-evidence/">A vendor export is not buyer evidence</a></h3><p>控制域、程序性来源检查、结果观察者等级、四个完成轴和受控买方身份：供应商导出不自动成为独立买方证据。</p></div>
+            <div class="journal-action"><a href="https://roy-tong.github.io/en/notes/06-verovo-a-vendor-export-is-not-buyer-evidence/">阅读文章 →</a></div>
+          </article>
+          <article class="journal-item" data-journal-product="verovo">
+            <div class="journal-meta"><span class="tag">Verovo · 经济优化</span><time datetime="2026-11-24">2026-11-24</time></div>
+            <div><h3><a href="https://roy-tong.github.io/Verovo/blog/ai-spend-optimization.html">How to optimize AI agent spend without confusing cost with value</a></h3><p>Monitoring、独立审计、每个合格结果的成本、工具替换实验，以及为什么增量贡献需要单独验证。</p></div>
+            <div class="journal-action"><a href="https://roy-tong.github.io/Verovo/blog/ai-spend-optimization.html">阅读文章 →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="reading-title">
+      <div class="wrap compare">
+        <div>
+          <h2 id="reading-title">文章是产品证据的一部分，不是另建一个内容品牌</h2>
+          <p class="section-intro">每篇文章都回到一项真实任务、一个可复现机制或一个公开失败。后续复测以新文章追加，不改写历史结论。</p>
+          <a class="btn btn-primary" href="https://roy-tong.github.io/essays/">打开全部 120 篇文章 →</a>
+        </div>
+        <div>
+          <ul class="compare-list">
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><div><strong>代码级机制</strong><span>研究事务、执行恢复、确定性重放、证据类型与调度资格。</span></div></li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><div><strong>可复现材料</strong><span>真实输出、命令、失败路径和公开源码链接。</span></div></li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><div><strong>明确的证据边界</strong><span>合成样例、内部自用、公开修复与外部采用分别表述。</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark quote-band"><div class="wrap"><blockquote>读懂机制之后，下一步仍然是把真实任务跑起来。</blockquote><p><a class="btn btn-dark" href="start.html">选择一项真实任务 →</a></p></div></section>
+  </main>
+
+  <footer class="footer wrap">
+    <div class="footer-grid">
+      <div><h2>OVO</h2><p>三个产品，一套 AI Native 业务交付体验。</p></div>
+      <div><h3>产品</h3><ul><li><a href="index.html#products">产品服务</a></li><li><a href="start.html">开始使用</a></li></ul></div>
+      <div><h3>证据</h3><ul><li><a href="cases.html">真实案例</a></li><li><a href="https://roy-tong.github.io/essays/">全部文章</a></li></ul></div>
+      <div><h3>社区</h3><ul><li><a href="https://discord.gg/UqrM8MCXb">Discord</a></li><li><a href="https://x.com/elliwoodtong">X / @elliwoodtong</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>MIT open source · 内容复核于 2026-11-26</span><span>文章、代码与证据保持同一口径</span></div>
+  </footer>
+</body>
+</html>
