@@ -4,7 +4,7 @@
   "products": {
     "askovo": {
       "stable": "2.25.0",
-      "preview": "2.25.1rc2",
+      "preview": "2.25.1rc3",
       "package": "askovo",
       "command": "askovo",
       "demo": "askovo demo"

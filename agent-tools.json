@@ -6,7 +6,7 @@
     "askovo": {
       "user_intents": ["validate a product decision", "AI user research", "demand validation", "review new evidence"],
       "capabilities": ["decision tracking", "authorized collection", "counterevidence review", "local primary-research runtimes", "research watches"],
-      "installation": {"stable": "pipx install askovo==2.25.0", "preview": "pipx install askovo==2.25.1rc2"},
+      "installation": {"stable": "pipx install askovo==2.25.0", "preview": "pipx install askovo==2.25.1rc3"},
       "prerequisites": ["a consequential decision", "a named owner", "authorized sources for external collection"],
       "first_task": "askovo decide start --input task.json && askovo decide status TASK_ID && askovo decide brief TASK_ID --format md",
       "expected_output": ["decision status", "partial or complete Decision Brief", "evidence and gap references"],
