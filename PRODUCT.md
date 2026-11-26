@@ -27,7 +27,7 @@ A general agent can plan, write and operate software. OVO supplies what generic 
 
 ## Operating Context
 
-- Three independently installable prerelease candidates: Askovo 2.25.1rc1, Growovo 0.23.1rc2 and Verovo 0.20.1rc1, with CLI, MCP and Agent Skill entry points.
+- Three independently installable prerelease candidates: Askovo 2.25.1rc1, Growovo 0.23.1rc2 and Verovo 0.20.1rc2, with CLI, MCP and Agent Skill entry points.
 - Three flagship service groups: Opportunity Research / Demand Validation / Product Intelligence; Managed Growth / First Users / Distribution Intelligence; Agent Spend Healthcheck / Independent Bill Audit / Agent Economics Optimization.
 - Real-task evidence and synthetic local examples are shown separately. Current capability and future validation are different states.
 - Existing repositories: https://github.com/roy-tong/Askovo, https://github.com/roy-tong/Growovo and https://github.com/roy-tong/Verovo.

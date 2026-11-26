@@ -15,8 +15,8 @@ REQUIRED = {
                 "href=\"https://roy-tong.github.io/Verovo/first-look.html\""],
     "cases.html": ["data-filter-group=\"cases\"", "109,429", "73 → 0", "110+ / 65+"],
     "journal.html": ["data-filter-group=\"journal\"", "01-askovo-a-research-database-needs-transactions", "02-growovo-exactly-once-is-the-wrong-goal", "03-verovo-deterministic-replay-with-unknowns", "ai-spend-optimization"],
-    "start.html": ["assets/bp/ovo-agent-native-bp-20261126.pdf", "assets/bp/ovo-agent-native-bp-20261126.pptx", "2.25.1rc1", "0.23.1rc2", "0.20.1rc1"],
-    "en-start.html": ["assets/bp/ovo-agent-native-bp-20261126.pdf", "assets/bp/ovo-agent-native-bp-20261126.pptx", "2.25.1rc1", "0.23.1rc2", "0.20.1rc1"],
+    "start.html": ["assets/bp/ovo-agent-native-bp-20261126.pdf", "assets/bp/ovo-agent-native-bp-20261126.pptx", "2.25.1rc1", "0.23.1rc2", "0.20.1rc2"],
+    "en-start.html": ["assets/bp/ovo-agent-native-bp-20261126.pdf", "assets/bp/ovo-agent-native-bp-20261126.pptx", "2.25.1rc1", "0.23.1rc2", "0.20.1rc2"],
 }
 
 

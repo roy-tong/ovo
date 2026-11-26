@@ -27,7 +27,7 @@ askovo demo
 pipx install growovo==0.23.1rc2
 mkt demo
 
-pipx install verovo==0.20.1rc1
+pipx install verovo==0.20.1rc2
 verovo review --sample
 ```
 
@@ -35,7 +35,7 @@ verovo review --sample
 
 - Askovo 2.25.1rc1 preview: https://github.com/roy-tong/Askovo and https://github.com/roy-tong/Askovo/blob/main/docs/feature-status.md
 - Growovo 0.23.1rc2 preview: https://github.com/roy-tong/Growovo and https://github.com/roy-tong/Growovo/blob/main/docs/feature-status.md
-- Verovo 0.20.1rc1 preview: https://github.com/roy-tong/Verovo and https://github.com/roy-tong/Verovo/blob/main/docs/feature-status.md
+- Verovo 0.20.1rc2 preview: https://github.com/roy-tong/Verovo and https://github.com/roy-tong/Verovo/blob/main/docs/feature-status.md
 
 ## Evidence and next validation
 
