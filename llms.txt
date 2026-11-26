@@ -25,8 +25,6 @@ OVO lets general agents deliver real work. Each product can be installed indepen
 - 真实案例与 Demo / Real cases and interactive demos: https://roy-tong.github.io/ovo/cases.html and https://roy-tong.github.io/ovo/en-cases.html
 - 工程手记 / Engineering journal: https://roy-tong.github.io/ovo/journal.html and https://roy-tong.github.io/ovo/en-journal.html
 - 快速开始 / Quickstart: https://roy-tong.github.io/ovo/start.html and https://roy-tong.github.io/ovo/en-start.html
-- BP / Strategy deck: https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pdf
-- Editable BP: https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pptx
 
 ## 安装 / Install
 

@@ -12,8 +12,6 @@
 
 当前预发行版本：Askovo `2.25.1rc1`、Growovo `0.23.1rc2`、Verovo `0.20.1rc2`。本地 Demo 使用合成数据，公开案例保留来源、负结果和 unknown，不把功能演示写成外部采用。
 
-BP：[PDF](https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pdf) · [可编辑 PPTX](https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pptx)
-
 ## 本地预览
 
 网站使用双语静态 HTML、本地字体、CSS 和 JavaScript，无需构建：
@@ -39,7 +37,5 @@ OVO gives general agents the real-world capabilities they cannot get from a prom
 **Website**: [English](https://roy-tong.github.io/ovo/en.html) · [中文](https://roy-tong.github.io/ovo/) · [Cases & demos](https://roy-tong.github.io/ovo/en-cases.html) · [Get started](https://roy-tong.github.io/ovo/en-start.html)
 
 Current prereleases: Askovo `2.25.1rc1`, Growovo `0.23.1rc2` and Verovo `0.20.1rc2`. Local demos use synthetic data. Public cases preserve sources, negative results and unknowns; a feature demo is not external adoption.
-
-BP: [PDF](https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pdf) · [editable PPTX](https://roy-tong.github.io/ovo/assets/bp/ovo-agent-native-bp-20261126.pptx)
 
 Run the same preview command above, then check both languages, demo interactions, filters, reduced-motion support, mobile navigation and links before publishing.
