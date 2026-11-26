@@ -1,44 +1,16 @@
 # OVO
 
-> One AI-native business-delivery family with three independently installable products. Use Askovo for real research, Growovo for delegated growth operations, and Verovo for independent economic intelligence.
+Three independent open-source tools for product teams.
 
-## Choose a product
+- [Askovo](https://github.com/roy-tong/Askovo) helps researchers and product managers connect decisions to user evidence, counterexamples and later reviews.
+- [Growovo](https://github.com/roy-tong/Growovo) helps maintainers and small teams carry out authorized growth work, track replies and distinguish execution receipts from first use.
+- [Verovo](https://github.com/roy-tong/Verovo) helps engineers and buyers reconcile AI charges against usage records and compare costs for accepted tasks.
 
-- **Askovo**: Opportunity Research, Demand Validation and Product Intelligence. Start with a product idea, demand assumption or live product to obtain real evidence, counterevidence and a durable decision review.
-- **Growovo**: Managed Growth, First Users and Distribution Intelligence. Start with a real product, operating goal and channel authorization to reduce repetitive operations before evaluating activation and growth.
-- **Verovo**: Agent Spend Healthcheck, Independent Bill Audit and Agent Economics Optimization. Start with agent logs, a supplier bill or a tool comparison to discover economic problems and verify better options.
+## Explore
 
-All three share one navigation, task workbench, case library, journal and real-task entry. Product identity comes from service content and evidence, not different visual systems.
+- [English](https://roy-tong.github.io/ovo/en.html) · [中文](https://roy-tong.github.io/ovo/)
+- [Cases and interactive sample demos](https://roy-tong.github.io/ovo/en-cases.html)
+- [Run a local prerelease demo](https://roy-tong.github.io/ovo/en-start.html)
+- [Engineering journal](https://roy-tong.github.io/ovo/en-journal.html)
 
-## Website modules
-
-- [Home](https://roy-tong.github.io/ovo/): unified product workbench and product switching.
-- [Cases](https://roy-tong.github.io/ovo/cases.html): real research, internal use, negative results and synthetic examples with explicit boundaries.
-- [Journal](https://roy-tong.github.io/ovo/journal.html): six OVO engineering deep dives and agent-economics articles, filterable by product.
-- [Get started](https://roy-tong.github.io/ovo/start.html): installation and real-task entry for all three products.
-- [English home](https://roy-tong.github.io/ovo/en.html), [English cases](https://roy-tong.github.io/ovo/en-cases.html), [English journal](https://roy-tong.github.io/ovo/en-journal.html), [English start](https://roy-tong.github.io/ovo/en-start.html).
-
-## Entry points
-
-```bash
-pipx install askovo==2.25.1rc1
-askovo demo
-
-pipx install growovo==0.23.1rc2
-mkt demo
-
-pipx install verovo==0.20.1rc2
-verovo review --sample
-```
-
-## Product repositories and status
-
-- Askovo 2.25.1rc1 preview: https://github.com/roy-tong/Askovo and https://github.com/roy-tong/Askovo/blob/main/docs/feature-status.md
-- Growovo 0.23.1rc2 preview: https://github.com/roy-tong/Growovo and https://github.com/roy-tong/Growovo/blob/main/docs/feature-status.md
-- Verovo 0.20.1rc2 preview: https://github.com/roy-tong/Verovo and https://github.com/roy-tong/Verovo/blob/main/docs/feature-status.md
-
-## Evidence and next validation
-
-Askovo’s 109,429 comments are a convenience sample, not users or market share. Growovo’s 73-post launch with zero new Stars is a negative result, not proof that X never works. Verovo’s 110+ repositories and 65+ findings prove technical measurement, not customer savings. The USD 4.50 difference is synthetic, not a customer loss or recovery.
-
-Next validation covers real participants and second decision reviews, seven-day delegated operations and a second valid batch, and a real supplier period with equal-or-better-quality optimization. External first-task use and repeat use are not claimed.
+Case studies cite their public sources. Browser interactions use synthetic data. The quickstart runs the corresponding product locally.
