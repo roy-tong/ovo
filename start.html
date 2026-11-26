@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>先跑通样例，再委托真实任务 · OVO</title>
-  <meta name="description" content="安装三个预发布产品，运行本地样例，查看真实输出。再从一个有投入代价的研究、运营或经济核验任务开始。">
+  <title>不用先安装，也能看到结果 · OVO</title>
+  <meta name="description" content="先看真实交付结果，再复制命令运行 Demo，或把委托提示词交给自己的 Agent。选择一种最顺手的方式开始。">
   <link rel="canonical" href="https://roy-tong.github.io/ovo/start.html">
   <link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/start.html">
   <link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-start.html">
-  <meta property="og:title" content="先跑通样例，再委托真实任务 · OVO">
-  <meta property="og:description" content="三个预发行版本均可实际运行。先跑本地样例，再决定把哪项真实工作交给 Agent。">
+  <meta property="og:title" content="不用先安装，也能看到结果 · OVO">
+  <meta property="og:description" content="先看实际输出，再运行本地 Demo 或委托你的 Agent。三个预发行版本均已实际跑通。">
   <meta property="og:url" content="https://roy-tong.github.io/ovo/start.html">
   <meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png?v=work-samples">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,17 +21,20 @@
   <header><div class="frame nav"><a class="brand" href="index.html" aria-label="OVO">ovo</a><nav><a href="index.html#products">产品</a><a href="cases.html">案例与演示</a><a href="journal.html">工程手记</a></nav><div class="nav-end"><a class="language" href="en-start.html">EN</a><a class="pill" href="start.html">开始使用 ↗</a></div></div></header>
 
   <main id="main"><div class="frame inner">
-    <div class="page-title"><div class="kicker">QUICKSTART</div><h1>先跑通一个样例，再委托真实任务</h1><p>在装有 pipx 的终端运行命令，直接查看产品输出。以下是已实际跑通的预发行版本；接入真实用户、账号或生产控制时，仍由你明确授权。</p></div>
+    <div class="page-title"><div class="kicker">QUICKSTART</div><h1>不用先安装，也能看到结果</h1><p>先打开一个真实交付样例，看看 OVO 能给你什么。想亲手运行，再复制命令或把委托提示词交给自己的 Agent。</p></div>
 
-    <article class="quick tone-0" id="askovo-start"><div><div class="product-name"><span class="dot"></span>Askovo</div><h2>从一项产品决定到可复审证据</h2><a class="line-link" href="https://github.com/roy-tong/Askovo">源码与使用文档 ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install askovo==2.25.1rc1
-askovo demo</code></pre><p class="sample-output">样例输出 · 7 条合成记录，1 条判断得到材料支持。审计文件保留来源分布与重复率。下一步可以带入一项有投入代价的真实决定。</p></div></article>
+    <article class="quick tone-0" id="askovo-start"><div><div class="product-name"><span class="dot"></span>Askovo</div><h2>先看一项决定怎样被改变</h2><div class="links"><a class="line-link" href="https://roy-tong.github.io/Askovo/examples/decision-replay.html">免安装：打开 Decision Brief ↗</a><a class="line-link" href="https://github.com/roy-tong/Askovo">源码与使用文档 ↗</a></div></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install askovo==2.25.1rc1
+askovo demo</code></pre><button type="button" class="line-link" data-copy="pipx install askovo==2.25.1rc1&#10;askovo demo" data-copied="已复制" data-failed="复制失败，请手动选择">复制命令</button><p class="sample-output">你会看到 7 条合成记录和 1 条有材料支持的判断，审计文件保留来源分布与重复率。下一步，可以带入一项有投入代价的真实决定。</p></div></article>
 
-    <article class="quick tone-1" id="growovo-start"><div><div class="product-name"><span class="dot"></span>Growovo</div><h2>从授权动作到持续运营回执</h2><a class="line-link" href="https://github.com/roy-tong/Growovo">源码与使用文档 ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install growovo==0.23.1rc2
-mkt demo</code></pre><p class="sample-output">样例输出 · 展示授权检查、离线回执和拦截结果。下一步可以选择一个真实渠道和一周里最重复的工作。</p></div></article>
+    <article class="quick tone-1" id="growovo-start"><div><div class="product-name"><span class="dot"></span>Growovo</div><h2>先看发布之后如何持续执行</h2><div class="links"><a class="line-link" href="https://roy-tong.github.io/Growovo/examples/controlled-run.html">免安装：打开运营日卡 ↗</a><a class="line-link" href="https://github.com/roy-tong/Growovo">源码与使用文档 ↗</a></div></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install growovo==0.23.1rc2
+mkt demo</code></pre><button type="button" class="line-link" data-copy="pipx install growovo==0.23.1rc2&#10;mkt demo" data-copied="已复制" data-failed="复制失败，请手动选择">复制命令</button><p class="sample-output">你会看到授权检查、离线回执和拦截结果。下一步，可以选择一个真实渠道和一周里最重复的工作。</p></div></article>
 
-    <article class="quick tone-2" id="verovo-start"><div><div class="product-name"><span class="dot"></span>Verovo</div><h2>从费用记录到独立经济核验</h2><a class="line-link" href="https://github.com/roy-tong/Verovo">源码与使用文档 ↗</a></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install verovo==0.20.1rc2
-verovo review --sample</code></pre><p class="sample-output">样例输出 · 样例账单金额与约定一致；需要人工补救的任务有 5 项，超过约定的 2 项。下一步可以带入一个 Agent 环境或供应商账期。</p></div></article>
+    <article class="quick tone-2" id="verovo-start"><div><div class="product-name"><span class="dot"></span>Verovo</div><h2>先看一笔费用怎样被核清</h2><div class="links"><a class="line-link" href="https://roy-tong.github.io/Verovo/examples/replayable-period.html">免安装：打开可重放账期 ↗</a><a class="line-link" href="https://github.com/roy-tong/Verovo">源码与使用文档 ↗</a></div></div><div class="terminal"><div class="kicker">TERMINAL</div><pre><code>pipx install verovo==0.20.1rc2
+verovo review --sample</code></pre><button type="button" class="line-link" data-copy="pipx install verovo==0.20.1rc2&#10;verovo review --sample" data-copied="已复制" data-failed="复制失败，请手动选择">复制命令</button><p class="sample-output">样例账单金额与约定一致；需要人工补救的任务有 5 项，超过约定的 2 项。下一步，可以带入一个 Agent 环境或供应商账期。</p></div></article>
 
+    <article class="quick tone-0" id="agent-start"><div><div class="product-name"><span class="dot"></span>AGENT</div><h2>也可以让你的 Agent 先试试</h2><p>把下面这段委托提示词交给你的 Agent。它应当告诉你交付了什么、证据在哪里，以及下一步怎么继续。</p></div><div class="terminal"><div class="kicker">DELEGATION PROMPT</div><pre><code>安装并运行 OVO 的本地 Demo。
+告诉我它交付了什么、证据保存在哪里，
+以及哪些结果仍无法确认。</code></pre><button type="button" class="line-link" data-copy="安装并运行 OVO 的本地 Demo。告诉我它交付了什么、证据保存在哪里，以及哪些结果仍无法确认。" data-copied="已复制" data-failed="复制失败，请手动选择">复制委托提示词</button></div></article>
   </div></main>
 
   <footer><div class="frame foot"><a class="brand" href="index.html">ovo</a><span>MIT · Open source</span><div><a href="https://github.com/roy-tong/Askovo">Askovo ↗</a> <a href="https://github.com/roy-tong/Growovo">Growovo ↗</a> <a href="https://github.com/roy-tong/Verovo">Verovo ↗</a> <a href="https://discord.gg/UqrM8MCXb">Discord ↗</a></div></div></footer>

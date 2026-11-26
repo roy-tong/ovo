@@ -68,3 +68,7 @@ html:not(.enhanced) .filters{display:none}
 @media (prefers-reduced-motion: no-preference) {
   .sample-sheet:not([hidden]), .sample-review[open] p { animation: appear .32s ease-out; }
 }
+
+button.line-link{background:transparent;border:0;padding:0;color:inherit}
+
+.quick>div{min-width:0}.terminal pre{white-space:pre-wrap;overflow-wrap:anywhere}

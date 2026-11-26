@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>真实案例与交互 Demo · OVO</title>
-  <meta name="description" content="四个公开业务记录，三个使用合成数据的浏览器 Demo。看真实研究如何改变决定、持续运营如何形成回执、经济核验如何发现重复计算。">
+  <title>看看结果，再决定要不要试 · OVO</title>
+  <meta name="description" content="三个公开记录，三个可重放 Demo。看真实研究如何改变决定、执行结果如何独立核对、重复计量如何被修正。">
   <link rel="canonical" href="https://roy-tong.github.io/ovo/cases.html">
   <link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/cases.html">
   <link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-cases.html">
-  <meta property="og:title" content="真实案例与交互 Demo · OVO">
-  <meta property="og:description" content="真实结果先于功能演示。阅读公开业务记录，再用合成数据理解产品机制。">
+  <meta property="og:title" content="看看结果，再决定要不要试 · OVO">
+  <meta property="og:description" content="真实结果先于功能演示。阅读公开记录，再用合成数据亲手走一遍。">
   <meta property="og:url" content="https://roy-tong.github.io/ovo/cases.html">
   <meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png?v=work-samples">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,42 +21,34 @@
   <header><div class="frame nav"><a class="brand" href="index.html" aria-label="OVO">ovo</a><nav><a href="index.html#products">产品</a><a href="cases.html" aria-current="page">案例与演示</a><a href="journal.html">工程手记</a></nav><div class="nav-end"><a class="language" href="en-cases.html">EN</a><a class="pill" href="start.html">开始使用 ↗</a></div></div></header>
 
   <main id="main"><div class="frame inner">
-    <div class="page-title"><div class="kicker">REAL WORK, INSPECTABLE RESULTS</div><h1>真实案例与交互 Demo</h1><p>先读四个公开记录，再用合成数据理解产品机制。负结果和 unknown 同样值得保留。</p></div>
+    <div class="page-title"><div class="kicker">REAL WORK, INSPECTABLE RESULTS</div><h1>看看结果，再决定要不要试</h1><p>三个公开记录，三个可重放 Demo。先看产品怎样改变实际工作，再用合成数据亲手走一遍。</p></div>
     <div class="filters"><button type="button" data-filter="all" aria-pressed="true">全部</button><button type="button" data-filter="askovo" aria-pressed="false">Askovo</button><button type="button" data-filter="growovo" aria-pressed="false">Growovo</button><button type="button" data-filter="verovo" aria-pressed="false">Verovo</button></div>
 
     <article class="case tone-0" data-item="askovo" id="askovo-evidence">
       <div class="case-story"><div class="product-name"><span class="dot"></span>Askovo</div><small>公开研究记录</small>
-        <h2>109,429 条评论，怎样改变研发顺序？</h2>
-        <p>团队原本在考虑专用硬件。研究覆盖八个社区、两年的 109,429 条去重评论，发现用户已经在用通用工具处理素材，导出环节仍有摩擦。团队因此先验证软件和导出，再决定硬件投入。这是一项便利样本，说明一次产品取舍，不能换算成用户数或市场份额。</p>
+        <h2>109,429 条评论，改变研发顺序</h2>
+        <p>团队原本在考虑专用硬件。研究覆盖八个社区、两年的 109,429 条去重评论，发现用户已经在用通用工具处理素材，导出环节仍有摩擦。团队因此先验证软件和导出，再决定硬件投入。下一次做产品取舍，你也可以先看到真实材料，再决定投入顺序。</p>
         <a class="line-link" href="https://github.com/roy-tong/Askovo#the-goal-is-not-a-better-looking-report">查看公开原文 ↗</a>
       </div>
       <div class="demo"><div class="kicker">DEMO / 合成样例</div><h3>需求验证：反例怎样改变决定</h3><p>支持材料：有人提出了导出需求。当前建议：先验证导出流程。</p><div class="simulation"><div class="sim-controls"><span>选择本轮纳入的材料</span><div><button type="button" data-result="支持材料：有人提出了导出需求。当前建议：先验证导出流程。" aria-pressed="true">需求反馈</button><button type="button" data-result="新增访谈：另一位用户已能导出，但分享前要手动删掉多余字段。复审建议：先测试字段选择，再决定是否重做导出。" aria-pressed="false">加入一条反例</button></div></div><output aria-live="polite">支持材料：有人提出了导出需求。当前建议：先验证导出流程。</output></div><noscript><details><summary>加入一条反例</summary><p>新增访谈：另一位用户已能导出，但分享前要手动删掉多余字段。复审建议：先测试字段选择，再决定是否重做导出。</p></details></noscript><a class="line-link" href="https://roy-tong.github.io/Askovo/examples/decision-replay.html">打开完整产品样例 ↗</a></div>
     </article>
 
     <article class="case tone-1" data-item="growovo" id="growovo-evidence">
-      <div class="case-story"><div class="product-name"><span class="dot"></span>Growovo</div><small>公开发布复盘</small>
-        <h2>73 次发布，为什么没有带来新 Star？</h2>
-        <p>一次历史开源发布实验连续发布 73 条内容，观察窗口内新增 GitHub Star 为零。当晚没有使用 Growovo 完整记录，无法据此判断渠道好坏，但它足以停止用发送量证明增长。今天的产品把动作回执、真实互动、首次使用和主动复用分别记录。</p>
-        <a class="line-link" href="https://roy-tong.github.io/Growovo/guides/launch-autopsy.html">查看公开原文 ↗</a>
+      <div class="case-story"><div class="product-name"><span class="dot"></span>Growovo</div><small>公开执行回执</small>
+        <h2>一条评论，从授权执行到独立回读</h2>
+        <p>GitHub Issue 和评论通过获批路径创建，再用独立 GET 核对评论链接、正文、作者和目标。执行是否真实发生，不必只信 Agent 的一句话。你也可以用同一套方式，检查发布之后的每一步。</p>
+        <a class="line-link" href="https://github.com/roy-tong/Growovo/issues/41#issuecomment-7122950093">查看公开回执 ↗</a>
       </div>
       <div class="demo"><div class="kicker">DEMO / 合成样例</div><h3>持续运营：回执、回复和首用分开记</h3><p>模拟批次已提交一条消息。接下来检查投递回执。</p><div class="simulation"><div class="sim-controls"><span>选择已收到的事件</span><div><button type="button" data-result="投递：已接受。用户回复：未知。首次使用：未知。下一步：等待回复或产品事件，再更新记录。" aria-pressed="true">服务端回执</button><button type="button" data-result="投递：已接受。回复：已收到。首次使用：未知。下一步：处理用户提出的问题。" aria-pressed="false">收到回复</button><button type="button" data-result="投递：已接受。回复：已收到。首次使用：已观察到。下一步：记录上手结果，并等待后续使用证据。" aria-pressed="false">首次使用</button></div></div><output aria-live="polite">投递：已接受。用户回复：未知。首次使用：未知。下一步：等待回复或产品事件，再更新记录。</output></div><noscript><details><summary>查看投递回执</summary><p>投递：已接受。用户回复：未知。首次使用：未知。下一步：等待回复或产品事件，再更新记录。</p></details></noscript><a class="line-link" href="https://roy-tong.github.io/Growovo/examples/controlled-run.html">打开完整产品样例 ↗</a></div>
     </article>
 
     <article class="case tone-2" data-item="verovo" id="verovo-evidence">
       <div class="case-story"><div class="product-name"><span class="dot"></span>Verovo</div><small>上游合并记录</small>
-        <h2>100 tokens，为什么被算成 300？</h2>
-        <p>在开源工具 tokendash 的用量记录中，同一条回复的三个内容块重复携带整条回复的 100 tokens。逐行累加会得到 300 tokens。公开修复按消息身份归并重复记录，合并记录可查。这个结果修正了工具的统计，未涉及客户退款。</p>
+        <h2>100 tokens，不再被算成 300</h2>
+        <p>在开源工具 tokendash 的用量记录中，同一条回复的三个内容块重复携带整条回复的 100 tokens。逐行累加会得到 300 tokens。公开修复按消息身份归并重复记录，合并记录可查。你的 Agent 数据，也值得用同样的方式独立核一遍。</p>
         <a class="line-link" href="https://github.com/zhangferry/tokendash/pull/37">查看公开原文 ↗</a>
       </div>
       <div class="demo"><div class="kicker">DEMO / 合成样例</div><h3>经济核验：先去掉重复，再谈费用</h3><p>三行相同消息 ID，各带 100 tokens。逐行相加得到 300 tokens。</p><div class="simulation"><div class="sim-controls"><span>选择同一条回复的内容块数</span><div><button type="button" data-result="逐行相加：100 tokens。按消息归并：100 tokens。重复计入：0 tokens。" aria-pressed="false">1</button><button type="button" data-result="逐行相加：200 tokens。按消息归并：100 tokens。重复计入：100 tokens。" aria-pressed="false">2</button><button type="button" data-result="逐行相加：300 tokens。按消息归并：100 tokens。重复计入：200 tokens。" aria-pressed="true">3</button></div></div><output aria-live="polite">逐行相加：300 tokens。按消息归并：100 tokens。重复计入：200 tokens。</output></div><noscript><details><summary>按消息 ID 重算</summary><p>3 行 → 1 条唯一消息 → 100 tokens。原统计多计 200 tokens。仍需供应商账单才能判断实际收费。</p></details></noscript><a class="line-link" href="https://roy-tong.github.io/Verovo/examples/replayable-period.html">打开完整产品样例 ↗</a></div>
-    </article>
-
-    <article class="case tone-1" data-item="growovo">
-      <div class="case-story"><div class="product-name"><span class="dot"></span>Growovo</div><small>团队自用记录</small>
-        <h2>10 封邮件被接受，接下来才算开始</h2>
-        <p>在团队自用的一次邮件跟进中，10 封邮件获得 SMTP 服务端接受回执。团队可以核查已提交的动作；是否送达收件箱、是否获回复、是否带来首次使用，各自还需要后续记录。这里仅公开汇总结果，不把发送回执当成获客。</p>
-      </div>
-      <div class="receipt"><small>SMTP</small><b>10</b><span>服务端接受</span><a class="line-link" href="https://roy-tong.github.io/Growovo/examples/controlled-run.html">了解回执如何记录 ↗</a></div>
     </article>
   </div></main>
 

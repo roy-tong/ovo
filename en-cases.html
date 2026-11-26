@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Real cases and interactive demos · OVO</title>
-  <meta name="description" content="Four public business records and three browser demos using synthetic data. See research change a decision, operations produce evidence and economic verification catch duplicate usage.">
+  <title>See the results before you try · OVO</title>
+  <meta name="description" content="Three public records and three replayable demos. See research change a decision, execution get independently verified and duplicate usage get corrected.">
   <link rel="canonical" href="https://roy-tong.github.io/ovo/en-cases.html">
   <link rel="alternate" hreflang="zh-CN" href="https://roy-tong.github.io/ovo/cases.html">
   <link rel="alternate" hreflang="en" href="https://roy-tong.github.io/ovo/en-cases.html">
-  <meta property="og:title" content="Real cases and interactive demos · OVO">
+  <meta property="og:title" content="See the results before you try · OVO">
   <meta property="og:description" content="Real outcomes before feature demos. Read public records, then inspect the mechanisms with synthetic data.">
   <meta property="og:url" content="https://roy-tong.github.io/ovo/en-cases.html">
   <meta property="og:image" content="https://roy-tong.github.io/ovo/assets/social-preview.png?v=work-samples">
@@ -21,42 +21,34 @@
   <header><div class="frame nav"><a class="brand" href="en.html" aria-label="OVO">ovo</a><nav><a href="en.html#products">Products</a><a href="en-cases.html" aria-current="page">Cases & demos</a><a href="en-journal.html">Journal</a></nav><div class="nav-end"><a class="language" href="cases.html">中文</a><a class="pill" href="en-start.html">Get started ↗</a></div></div></header>
 
   <main id="main"><div class="frame inner">
-    <div class="page-title"><div class="kicker">REAL WORK, INSPECTABLE RESULTS</div><h1>Real cases and interactive demos</h1><p>Read four public records, then explore the mechanisms with synthetic data. Negative results and unknowns belong in the evidence too.</p></div>
+    <div class="page-title"><div class="kicker">REAL WORK, INSPECTABLE RESULTS</div><h1>See the results before you try</h1><p>Three public records and three replayable demos. See how the products change real work, then explore the mechanisms with synthetic data.</p></div>
     <div class="filters"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="askovo" aria-pressed="false">Askovo</button><button type="button" data-filter="growovo" aria-pressed="false">Growovo</button><button type="button" data-filter="verovo" aria-pressed="false">Verovo</button></div>
 
     <article class="case tone-0" data-item="askovo" id="askovo-evidence">
       <div class="case-story"><div class="product-name"><span class="dot"></span>Askovo</div><small>Published research</small>
-        <h2>How did 109,429 comments change the build order?</h2>
-        <p>The team was weighing dedicated hardware. Across 109,429 deduplicated comments from eight communities over two years, people described existing software workflows and friction exporting material. The team therefore validated software and export before committing to hardware. This convenience sample informs a product decision; it is not a count of users or market share.</p>
+        <h2>109,429 comments changed the build order</h2>
+        <p>The team was weighing dedicated hardware. Across 109,429 deduplicated comments from eight communities over two years, people described existing software workflows and friction exporting material. The team therefore validated software and export before committing to hardware. Before your next build decision, you can inspect the evidence first too.</p>
         <a class="line-link" href="https://github.com/roy-tong/Askovo#the-goal-is-not-a-better-looking-report">Read the source ↗</a>
       </div>
       <div class="demo"><div class="kicker">DEMO / SAMPLE DATA</div><h3>Demand validation: let counterevidence change the decision</h3><p>Evidence: a user requested export. Current decision: test the export flow.</p><div class="simulation"><div class="sim-controls"><span>Choose the evidence to include</span><div><button type="button" data-result="Evidence: a user requested export. Current decision: test the export flow." aria-pressed="true">Request</button><button type="button" data-result="New interview: another user can export but manually removes fields before sharing. Revised decision: test field selection before rebuilding export." aria-pressed="false">Add a counterexample</button></div></div><output aria-live="polite">Evidence: a user requested export. Current decision: test the export flow.</output></div><noscript><details><summary>Add a counterexample</summary><p>New interview: another user can export but manually removes fields before sharing. Revised decision: test field selection before rebuilding export.</p></details></noscript><a class="line-link" href="https://roy-tong.github.io/Askovo/en/examples/decision-replay.html">Open the full product example ↗</a></div>
     </article>
 
     <article class="case tone-1" data-item="growovo" id="growovo-evidence">
-      <div class="case-story"><div class="product-name"><span class="dot"></span>Growovo</div><small>Published retrospective</small>
-        <h2>Why did 73 launch posts produce zero new Stars?</h2>
-        <p>One historical open-source launch sent 73 posts and produced zero new GitHub Stars in the observation window. It did not use a complete Growovo ledger, so it cannot settle channel attribution. It is enough to stop treating send volume as growth. Today, action receipts, qualified interaction, first use and voluntary reuse stay separate.</p>
-        <a class="line-link" href="https://roy-tong.github.io/Growovo/guides/launch-autopsy.en.html">Read the source ↗</a>
+      <div class="case-story"><div class="product-name"><span class="dot"></span>Growovo</div><small>Public execution receipt</small>
+        <h2>From an authorized comment to independent readback</h2>
+        <p>A GitHub issue and comment were created through an approved path, then independently checked for URL, body, author and target. You do not have to take the agent’s word for what happened next. You can inspect every step after publication the same way.</p>
+        <a class="line-link" href="https://github.com/roy-tong/Growovo/issues/41#issuecomment-7122950093">Inspect the public receipt ↗</a>
       </div>
       <div class="demo"><div class="kicker">DEMO / SAMPLE DATA</div><h3>Continuous operations: separate receipts, replies and first use</h3><p>One message has been submitted in a simulated batch. Inspect its delivery receipt.</p><div class="simulation"><div class="sim-controls"><span>Choose the event received</span><div><button type="button" data-result="Delivery: accepted. Reply: unknown. First use: unknown. Wait for a reply or a product event before updating the record." aria-pressed="true">Accepted</button><button type="button" data-result="Delivery: accepted. Reply: received. First use: unknown. Next: address the question." aria-pressed="false">Replied</button><button type="button" data-result="Delivery: accepted. Reply: received. First use: observed. Record onboarding and await evidence of repeat use." aria-pressed="false">First use</button></div></div><output aria-live="polite">Delivery: accepted. Reply: unknown. First use: unknown. Wait for a reply or a product event before updating the record.</output></div><noscript><details><summary>Inspect the receipt</summary><p>Delivery: accepted. Reply: unknown. First use: unknown. Wait for a reply or a product event before updating the record.</p></details></noscript><a class="line-link" href="https://roy-tong.github.io/Growovo/examples/controlled-run.en.html">Open the full product example ↗</a></div>
     </article>
 
     <article class="case tone-2" data-item="verovo" id="verovo-evidence">
       <div class="case-story"><div class="product-name"><span class="dot"></span>Verovo</div><small>Merged upstream fix</small>
-        <h2>How did 100 tokens become 300?</h2>
-        <p>In the open-source tool tokendash, three content blocks could each carry the same response total of 100 tokens. Summing them produced 300. The merged correction groups records by message identity and is publicly inspectable. It fixes usage reporting; no customer refund is claimed.</p>
+        <h2>100 tokens, no longer counted as 300</h2>
+        <p>In the open-source tool tokendash, three content blocks could each carry the same response total of 100 tokens. Summing them produced 300. The merged correction groups records by message identity and is publicly inspectable. Your agent data deserves the same independent check.</p>
         <a class="line-link" href="https://github.com/zhangferry/tokendash/pull/37">Read the source ↗</a>
       </div>
       <div class="demo"><div class="kicker">DEMO / SAMPLE DATA</div><h3>Economic verification: deduplicate before calculating value</h3><p>Three rows share a message ID and each reports 100 tokens. Summing rows gives 300 tokens.</p><div class="simulation"><div class="sim-controls"><span>Choose blocks per response</span><div><button type="button" data-result="Row sum: 100 tokens. Unique message: 100 tokens. Duplicate count: 0 tokens." aria-pressed="false">1</button><button type="button" data-result="Row sum: 200 tokens. Unique message: 100 tokens. Duplicate count: 100 tokens." aria-pressed="false">2</button><button type="button" data-result="Row sum: 300 tokens. Unique message: 100 tokens. Duplicate count: 200 tokens." aria-pressed="true">3</button></div></div><output aria-live="polite">Row sum: 300 tokens. Unique message: 100 tokens. Duplicate count: 200 tokens.</output></div><noscript><details><summary>Recount by message ID</summary><p>3 rows → 1 unique message → 100 tokens. The original total included 200 duplicate tokens. A supplier bill is needed to verify charges.</p></details></noscript><a class="line-link" href="https://roy-tong.github.io/Verovo/examples/replayable-period.html">Open the full product example ↗</a></div>
-    </article>
-
-    <article class="case tone-1" data-item="growovo">
-      <div class="case-story"><div class="product-name"><span class="dot"></span>Growovo</div><small>Team-reported use</small>
-        <h2>Ten accepted emails are only the beginning</h2>
-        <p>In one team-operated outreach batch, ten messages received SMTP acceptance receipts. Those receipts establish submission to the server. Inbox delivery, replies and first use each require further evidence. Only the aggregate is shared here; submission is not acquisition.</p>
-      </div>
-      <div class="receipt"><small>SMTP</small><b>10</b><span>Accepted by the mail server</span><a class="line-link" href="https://roy-tong.github.io/Growovo/examples/controlled-run.en.html">Explore the receipt mechanism ↗</a></div>
     </article>
   </div></main>
 

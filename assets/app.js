@@ -43,3 +43,39 @@ document.querySelectorAll('.simulation').forEach((demo) => {
     output.textContent = choice.dataset.result;
   }));
 });
+
+async function copyText(value) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(value);
+      return true;
+    } catch (error) {
+      // Fall through to the selection-based copy path.
+    }
+  }
+  const area = document.createElement('textarea');
+  area.value = value;
+  area.style.position = 'fixed';
+  area.style.opacity = '0';
+  area.style.pointerEvents = 'none';
+  document.body.appendChild(area);
+  area.focus();
+  area.select();
+  let copied = false;
+  try {
+    copied = document.execCommand('copy');
+  } catch (error) {
+    copied = false;
+  }
+  area.remove();
+  return copied;
+}
+
+document.querySelectorAll('[data-copy]').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const original = button.textContent;
+    const copied = await copyText(button.dataset.copy);
+    button.textContent = copied ? button.dataset.copied : button.dataset.failed;
+    window.setTimeout(() => { button.textContent = original; }, 1800);
+  });
+});

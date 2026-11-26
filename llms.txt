@@ -1,21 +1,21 @@
 # OVO
 
-OVO 让通用 Agent 把真实业务做成。三个独立开源产品，可以单独安装，也可以由宿主 Agent 按需组合。宿主 Agent 选择执行路径；OVO 提供真实服务、数据、持久状态和确定性证据约束。
+让 Agent 交付真实工作，而不只是建议。三个独立开源产品，可单独安装，也可由宿主 Agent 按需组合。你带来真实任务，OVO 提供数据、服务、执行和可复核的结果。
 
-OVO lets general agents deliver real work. Each product can be installed independently or composed by a host agent. The agent chooses the execution path; OVO supplies real services, data, durable state and deterministic evidence constraints.
+OVO lets general agents deliver real work, not just prompts. Each product can be installed independently or composed by a host agent. Bring a real task; OVO supplies data, services, execution and inspectable results.
 
 ## 产品与版本 / Products and prereleases
 
-- **Askovo `2.25.1rc1`**：机会研究、需求验证和持续产品情报。输入一项产品决定和现有材料，获得真实证据、反证和可复审依据。
-  Opportunity research, demand validation and product intelligence. Bring a product decision and existing material to obtain real evidence, counterevidence and a reviewable decision.
+- **Askovo `2.25.1rc1`**：在研发之前找出真实需求、替代方案与反证，让产品决定有外部证据和复审入口。
+  Find real demand, alternatives and counterevidence before you build, with an evidence-backed decision you can reopen.
   Repository: https://github.com/roy-tong/Askovo
 
-- **Growovo `0.23.1rc2`**：持续市场监听、授权运营、用户跟进、首用和分发复盘。发送量、真实互动、首次使用和主动复用分别记录。
-  Continuous market listening, authorized operations, follow-up, first use and distribution review. Send volume, qualified interaction, first use and voluntary reuse stay separate.
+- **Growovo `0.23.1rc2`**：在授权范围内持续处理机会、回复、跟进和结果回读，让发布之后的工作持续发生。
+  Keep opportunity screening, replies, follow-up and result readback moving inside clear authorization.
   Repository: https://github.com/roy-tong/Growovo
 
-- **Verovo `0.20.1rc2`**：Agent 费用健康检查、独立账单审计和 Agent 经济性优化。区分估算费用、确认账单、控制覆盖、潜在节省和实际节省。
-  Agent spend healthchecks, independent bill audits and economics optimization. Keep estimates, confirmed bills, control coverage, potential savings and realized savings separate.
+- **Verovo `0.20.1rc2`**：从调用记录和账单中发现重复、异常与低效环节，把费用对应到具体任务和合格结果。
+  Find duplicates, anomalies and inefficient work in usage logs and supplier bills, then connect charges to tasks and accepted outcomes.
   Repository: https://github.com/roy-tong/Verovo
 
 ## 网站入口 / Website entry points
@@ -24,7 +24,7 @@ OVO lets general agents deliver real work. Each product can be installed indepen
 - English home: https://roy-tong.github.io/ovo/en.html
 - 真实案例与 Demo / Real cases and interactive demos: https://roy-tong.github.io/ovo/cases.html and https://roy-tong.github.io/ovo/en-cases.html
 - 工程手记 / Engineering journal: https://roy-tong.github.io/ovo/journal.html and https://roy-tong.github.io/ovo/en-journal.html
-- 快速开始 / Quickstart: https://roy-tong.github.io/ovo/start.html and https://roy-tong.github.io/ovo/en-start.html
+- 不用安装先看结果 / See results before installing: https://roy-tong.github.io/ovo/start.html and https://roy-tong.github.io/ovo/en-start.html
 
 ## 安装 / Install
 
@@ -39,8 +39,13 @@ pipx install verovo==0.20.1rc2
 verovo review --sample
 ```
 
+也可以让 Agent 先试用 / Or let your agent try first:
+
+> 安装并运行 OVO 的本地 Demo。告诉我它交付了什么、证据保存在哪里，以及哪些结果仍无法确认。
+> Install and run OVO’s local demo. Tell me what it delivered, where the evidence is stored, and which results remain unconfirmed.
+
 ## 证据边界 / Evidence boundaries
 
-公开研究样本不等于用户数量或市场份额；发送回执不等于增长；供应商导出不等于独立买方证据；本地 Demo 使用合成数据，不代表真实参与者、真实生产控制或外部采用。当前没有真实外部复用结论。
+公开案例链接原始来源。研究样本不等于用户数量或市场份额；执行回执不等于增长；供应商导出不等于独立买方证据；本地 Demo 使用合成数据，不代表真实生产采用。这些页面展示产品机制与交付结果，不伪造外部采用。
 
-Public research samples are not user counts or market share. Dispatch receipts are not growth. Supplier exports are not independent buyer evidence. Local demos use synthetic data and do not establish real participants, production control or external adoption. Voluntary repeat use remains unproven.
+Public cases link to their sources. Research samples are not user counts or market share. Execution receipts are not growth. Supplier exports are not independent buyer evidence. Local demos use synthetic data and do not establish production adoption. These pages demonstrate product mechanisms and deliverables without inventing external adoption.
