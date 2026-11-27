@@ -1,24 +1,24 @@
 {
   "schema": "ovo.release-channels/1",
-  "updated_at": "2026-11-26",
+  "updated_at": "2026-11-27",
   "products": {
     "askovo": {
-      "stable": "2.25.0",
-      "preview": "2.25.1rc3",
+      "stable": "2.25.2",
+      "preview": "2.25.2",
       "package": "askovo",
       "command": "askovo",
       "demo": "askovo demo"
     },
     "growovo": {
-      "stable": "0.23.0",
-      "preview": "0.23.1rc3",
+      "stable": "1.0.0",
+      "preview": "1.0.0",
       "package": "growovo",
       "command": "mkt",
       "demo": "mkt demo"
     },
     "verovo": {
-      "stable": "0.20.0",
-      "preview": "0.20.1rc4",
+      "stable": "1.0.0",
+      "preview": "1.0.0",
       "package": "verovo",
       "command": "verovo",
       "demo": "verovo review --sample"
