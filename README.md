@@ -10,6 +10,10 @@
 
 **官网**：[中文](https://roy-tong.github.io/ovo/) · [English](https://roy-tong.github.io/ovo/en.html) · [案例与 Demo](https://roy-tong.github.io/ovo/cases.html) · [不用安装先看结果](https://roy-tong.github.io/ovo/start.html)
 
+**关注进展：** [X @elliwoodtong](https://x.com/elliwoodtong) · [加入 OVO Discord](https://discord.gg/UqrM8MCXb)
+
+公共入口规则：每个公开 HTML 页脚都必须保留 X `@elliwoodtong` 与 OVO Discord 两条链接；新增顶层或产品页时一并复制。
+
 Stable：Askovo `2.25.0`、Growovo `0.23.0`、Verovo `0.20.0`；Preview：Askovo `2.25.1rc3`、Growovo `0.23.1rc3`、Verovo `0.20.1rc4`。版本事实源为 `versions.json`，安装块由 `python3 assets/sync_versions.py` 同步。产品级入口为 `/askovo/`、`/growovo/`、`/verovo/`，Agent 任务清单为 `agent-tools.json`。本地 Demo 使用合成数据，公开案例链接原始来源。这里展示产品机制与实际交付，不把它写成外部采用证明。
 
 ## 本地预览
@@ -35,6 +39,8 @@ Give your agent real work, not just prompts. Three independent open-source produ
 | [Verovo](https://github.com/roy-tong/Verovo) | Independent economic facts, tool comparisons and optimization review |
 
 **Website**: [English](https://roy-tong.github.io/ovo/en.html) · [中文](https://roy-tong.github.io/ovo/) · [Cases & demos](https://roy-tong.github.io/ovo/en-cases.html) · [See results before installing](https://roy-tong.github.io/ovo/en-start.html)
+
+**Follow the build:** [X @elliwoodtong](https://x.com/elliwoodtong) · [Join the OVO Discord](https://discord.gg/UqrM8MCXb)
 
 Stable: Askovo `2.25.0`, Growovo `0.23.0` and Verovo `0.20.0`. Preview: Askovo `2.25.1rc3`, Growovo `0.23.1rc3` and Verovo `0.20.1rc4`. `versions.json` is the release source; run `python3 assets/sync_versions.py` to synchronize marked install blocks. Product entries live under `/askovo/`, `/growovo/` and `/verovo/`; `agent-tools.json` describes real first tasks. Local demos use synthetic data and public cases link to their sources. This demonstrates product mechanisms and deliverables, not external adoption.
 
