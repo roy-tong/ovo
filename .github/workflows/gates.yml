@@ -7,7 +7,8 @@ on:
 
 jobs:
   gates:
-    runs-on: ubuntu-latest
+    # ubuntu-latest 已滚到 26.04，那里没有 Python 3.9；固定 22.04 保持和产品基线一致
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
