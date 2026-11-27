@@ -31,8 +31,8 @@ def install_block(product, channel, html=False):
     return "<pre><code>%s</code></pre>" % command if html else command
 
 
-def sync_file(path, products, html=False):
-    text = path.read_text(encoding="utf-8")
+def render(text, products, html=False):
+    """Return the text with every install block and copy command brought up to date."""
     for name, product in products.items():
         for channel in ("stable", "preview"):
             tag = "%s-%s" % (name, channel)
@@ -55,15 +55,22 @@ def sync_file(path, products, html=False):
                     r'-->\s*<button\b[^>]*\bdata-copy=")pipx install ' +
                     re.escape(product["package"]) + r'==[^"]*(")')
                 text = pattern.sub(lambda match: match.group(1) + escaped + match.group(2), text)
-    path.write_text(text, encoding="utf-8")
+    return text
 
 
-def sync_manifest(products):
-    path = ROOT / "agent-tools.json"
-    text = path.read_text(encoding="utf-8")
-    document = json.loads(text)
+def sync_file(path, products, html=False):
+    """Rewrite one file in place. Returns True when it was out of date."""
+    original = path.read_text(encoding="utf-8")
+    updated = render(original, products, html=html)
+    if updated == original:
+        return False
+    path.write_text(updated, encoding="utf-8")
+    return True
+
+
+def render_manifest(text, products):
     for name, product in products.items():
-        record = document["products"][name]
+        record = json.loads(text)["products"][name]
         previous = json.dumps(record["installation"], ensure_ascii=False)
         installation = {
             channel: "pipx install %s==%s" % (product["package"], product[channel])
@@ -75,8 +82,42 @@ def sync_manifest(products):
             '"installation": ' + replacement.replace("\\", "\\\\"), text, count=1)
         if count != 1:
             raise ValueError("expected one installation manifest for %s" % name)
-        record["installation"] = installation
-    path.write_text(text, encoding="utf-8")
+    return text
+
+
+def sync_manifest(products):
+    path = ROOT / "agent-tools.json"
+    original = path.read_text(encoding="utf-8")
+    updated = render_manifest(original, products)
+    if updated == original:
+        return False
+    path.write_text(updated, encoding="utf-8")
+    return True
+
+
+def targets(args):
+    """Every file that carries an install block, as (path, product-or-None).
+
+    The three product subpages are listed here on purpose: they carry the same
+    markers as the landing pages, and leaving them out is how the site ended up
+    advertising a preview version two RCs behind versions.json.
+    """
+    files = [(ROOT / "start.html", None), (ROOT / "en-start.html", None)]
+    for name in ("askovo", "growovo", "verovo"):
+        for page in ("index.html", "en.html"):
+            files.append((ROOT / name / page, name))
+    for relative in ("llms.txt", "README.md"):
+        files.append((ROOT / relative, None))
+    for name, directory in (
+        ("askovo", args.askovo), ("growovo", args.growovo), ("verovo", args.verovo),
+    ):
+        if directory is None:
+            continue
+        for filename in ("README.md", "README.zh-CN.md", "README.en.md", "llms.txt"):
+            path = directory / filename
+            if path.is_file():
+                files.append((path, name))
+    return files
 
 
 def main():
@@ -84,27 +125,43 @@ def main():
     parser.add_argument("--askovo", type=Path)
     parser.add_argument("--growovo", type=Path)
     parser.add_argument("--verovo", type=Path)
+    parser.add_argument("--check", action="store_true",
+                        help="只比对不写入；与 versions.json 不一致就退 1")
     args = parser.parse_args()
     document = json.loads((ROOT / "versions.json").read_text(encoding="utf-8"))
     if document.get("schema") != "ovo.release-channels/1":
         raise ValueError("unsupported release channel schema")
     products = document["products"]
-    for relative in ("start.html", "en-start.html"):
-        sync_file(ROOT / relative, products, html=True)
-    sync_file(ROOT / "llms.txt", products)
-    sync_file(ROOT / "README.md", products)
-    sync_manifest(products)
-    for product, directory in (
-        ("askovo", args.askovo), ("growovo", args.growovo), ("verovo", args.verovo),
-    ):
-        if directory is None:
+    stale = []
+    for path, product in targets(args):
+        if not path.is_file():
             continue
-        for name in ("README.md", "README.zh-CN.md", "README.en.md", "llms.txt"):
-            path = directory / name
-            if path.is_file():
-                sync_file(path, {product: products[product]})
-    print("synchronized %d products from %s" % (len(products), ROOT / "versions.json"))
+        scoped = products if product is None else {product: products[product]}
+        original = path.read_text(encoding="utf-8")
+        if render(original, scoped, html=path.suffix == ".html") != original:
+            stale.append(path)
+            if not args.check:
+                sync_file(path, scoped, html=path.suffix == ".html")
+    manifest = ROOT / "agent-tools.json"
+    if render_manifest(manifest.read_text(encoding="utf-8"), products) != manifest.read_text(encoding="utf-8"):
+        stale.append(manifest)
+        if not args.check:
+            sync_manifest(products)
+    if args.check:
+        if stale:
+            for path in stale:
+                print("out of sync with versions.json: %s" % path.relative_to(ROOT))
+            print("运行 python3 assets/sync_versions.py 后重新提交")
+            return 1
+        print("所有安装块与 %s 一致（%d 个产品）" % (
+            (ROOT / "versions.json").relative_to(ROOT), len(products)))
+        return 0
+    for path in stale:
+        print("updated %s" % path.relative_to(ROOT))
+    print("synchronized %d products from %s（改动 %d 个文件）" % (
+        len(products), (ROOT / "versions.json").relative_to(ROOT), len(stale)))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

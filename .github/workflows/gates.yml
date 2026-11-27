@@ -1,0 +1,19 @@
+name: site gates
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: 安装块与 versions.json 一致
+        run: python3 assets/sync_versions.py --check
+      - name: 公开范围与站内链接
+        run: python3 assets/check_public.py .
