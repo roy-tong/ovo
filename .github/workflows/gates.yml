@@ -1,0 +1,20 @@
+name: site gates
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  gates:
+    # ubuntu-latest 已滚到 26.04，那里没有 Python 3.9；固定 22.04 保持和产品基线一致
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: 安装块与 versions.json 一致
+        run: python3 assets/sync_versions.py --check
+      - name: 公开范围与站内链接
+        run: python3 assets/check_public.py .

@@ -33,26 +33,26 @@ OVO lets general agents deliver real work, not just prompts. Each product can be
 
 ## Stable 安装 / Stable installation
 
-<!--OVO:askovo-stable-->pipx install askovo==2.25.0
+<!--OVO:askovo-stable-->pipx install askovo==2.25.2
 askovo demo<!--/OVO:askovo-stable-->
 
-<!--OVO:growovo-stable-->pipx install growovo==0.23.0
+<!--OVO:growovo-stable-->pipx install growovo==1.0.0
 mkt demo<!--/OVO:growovo-stable-->
 
-<!--OVO:verovo-stable-->pipx install verovo==0.20.0
+<!--OVO:verovo-stable-->pipx install verovo==1.0.0
 verovo review --sample<!--/OVO:verovo-stable-->
 
 ## Preview 安装 / Prerelease installation
 
 Preview 只用于验收预发行能力，不与 Stable 的能力承诺混用。Use Preview only to evaluate prerelease capabilities.
 
-<!--OVO:askovo-preview-->pipx install askovo==2.25.1rc3
+<!--OVO:askovo-preview-->pipx install askovo==2.25.2
 askovo demo<!--/OVO:askovo-preview-->
 
-<!--OVO:growovo-preview-->pipx install growovo==0.23.1rc3
+<!--OVO:growovo-preview-->pipx install growovo==1.0.0
 mkt demo<!--/OVO:growovo-preview-->
 
-<!--OVO:verovo-preview-->pipx install verovo==0.20.1rc4
+<!--OVO:verovo-preview-->pipx install verovo==1.0.0
 verovo review --sample<!--/OVO:verovo-preview-->
 
 也可以让 Agent 先试用 / Or let your agent try first:
