@@ -1,6 +1,6 @@
 {
   "schema": "ovo.release-channels/1",
-  "updated_at": "2026-11-27",
+  "updated_at": "2026-11-28",
   "products": {
     "askovo": {
       "stable": "2.25.2",
@@ -10,8 +10,8 @@
       "demo": "askovo demo"
     },
     "growovo": {
-      "stable": "1.0.0",
-      "preview": "1.0.0",
+      "stable": "1.0.2",
+      "preview": "1.0.2",
       "package": "growovo",
       "command": "mkt",
       "demo": "mkt demo"

@@ -36,7 +36,7 @@ OVO lets general agents deliver real work, not just prompts. Each product can be
 <!--OVO:askovo-stable-->pipx install askovo==2.25.2
 askovo demo<!--/OVO:askovo-stable-->
 
-<!--OVO:growovo-stable-->pipx install growovo==1.0.0
+<!--OVO:growovo-stable-->pipx install growovo==1.0.2
 mkt demo<!--/OVO:growovo-stable-->
 
 <!--OVO:verovo-stable-->pipx install verovo==1.0.0
@@ -49,7 +49,7 @@ Preview 只用于验收预发行能力，不与 Stable 的能力承诺混用。U
 <!--OVO:askovo-preview-->pipx install askovo==2.25.2
 askovo demo<!--/OVO:askovo-preview-->
 
-<!--OVO:growovo-preview-->pipx install growovo==1.0.0
+<!--OVO:growovo-preview-->pipx install growovo==1.0.2
 mkt demo<!--/OVO:growovo-preview-->
 
 <!--OVO:verovo-preview-->pipx install verovo==1.0.0

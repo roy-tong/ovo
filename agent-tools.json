@@ -17,7 +17,7 @@
     "growovo": {
       "user_intents": ["operate an open-source project", "delegate repetitive growth work", "follow up real users", "review first use and retention"],
       "capabilities": ["repository intake", "persistent operating state", "authorized actions", "receipts and reconciliation", "lifecycle follow-up"],
-      "installation": {"stable": "pipx install growovo==1.0.0", "preview": "pipx install growovo==1.0.0"},
+      "installation": {"stable": "pipx install growovo==1.0.2", "preview": "pipx install growovo==1.0.2"},
       "prerequisites": ["a real repository", "an operating goal", "named account and channel authorization for writes"],
       "first_task": "mkt growth intake --repo /path/to/repository --slug owner/repo --read-metrics --out intake-goal.json && mkt growth start --file intake-goal.json && mkt growth run SERVICE_ID --action diagnose-product --by \"$USER\"",
       "expected_output": ["repository intake contract", "service id", "product diagnosis and next actions"],

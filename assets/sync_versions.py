@@ -157,7 +157,7 @@ def main():
             (ROOT / "versions.json").relative_to(ROOT), len(products)))
         return 0
     for path in stale:
-        print("updated %s" % path.relative_to(ROOT))
+        print("updated %s" % path)
     print("synchronized %d products from %s（改动 %d 个文件）" % (
         len(products), (ROOT / "versions.json").relative_to(ROOT), len(stale)))
     return 0
